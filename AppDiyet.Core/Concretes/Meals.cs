@@ -10,9 +10,8 @@ namespace AppDiyet.Core.Concretes
 {
     public class Meals : BaseEntity
     {
-        public string Name { get; set; }
-        public DateTime MealDate { get; set; }
-        public MealCategories MealCategories { get; set; }
+        public MealCategories MealName { get; set; }
         public int UserId { get; set; }
+        public Users Users { get; set; }
     }
 }

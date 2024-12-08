@@ -7,7 +7,7 @@ using AppDiyet.Core.Concretes;
 
 namespace AppDiyet.Repo.Abstarcts
 {
-    public interface IFoodCategoriesRepo : IBaseRepo<FoodCategories>
+    public interface IFoodCategoriesRepo 
     {
         FoodCategories GetFoodCategories(string name);
     }

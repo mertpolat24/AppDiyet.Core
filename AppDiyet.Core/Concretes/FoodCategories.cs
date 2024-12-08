@@ -7,8 +7,9 @@ using AppDiyet.Core.Abstract;
 
 namespace AppDiyet.Core.Concretes
 {
-    public class FoodCategories : BaseEntity
+    public class FoodCategories 
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public ICollection<Food>  Foods { get; set; }
     }

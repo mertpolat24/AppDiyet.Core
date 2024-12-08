@@ -11,9 +11,10 @@ namespace AppDiyet.Core.Concretes
     {
         public string Name { get; set; }
         public double Calories { get; set; }
-        public double Protein { get; set; }
+        public double Proteins { get; set; }
         public double FoodWeight { get; set; }
-        public string Description { get; set; }
+        public string? Description { get; set; }
         public int FoodCategoriesId { get; set; }
+        public FoodCategories FoodCategories { get; set; }
     }
 }
