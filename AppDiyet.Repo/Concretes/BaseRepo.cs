@@ -20,6 +20,7 @@ namespace AppDiyet.Repo.Concretes
         {
             _dbContext = dbContext;
             _dbSet = _dbContext.Set<T>();
+            //yusuf
         }
 
         public bool Any(Expression<Func<T, bool>> predicate)
