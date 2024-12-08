@@ -7,7 +7,15 @@ using AppDiyet.Core.Concretes;
 
 namespace AppDiyet.Repo.Abstarcts
 {
-    public interface IUsersRepo : IBaseRepo<Menu>
+    public interface IUsersRepo : IBaseRepo<Users>
     {
+        double GetByWeight(Users users);
+        double GetByCalories(Users users);
+        double GetByProteins(Users users);
+        double CalculateCalories(Users users);
+        double CalculateProteins(Users users);
+        double ExceededCalories(Users users);
+        Meals GetByMeals(Meals meals);
+        Users GetByName(int Id);
     }
 }
