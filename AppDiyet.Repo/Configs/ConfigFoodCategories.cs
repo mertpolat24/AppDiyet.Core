@@ -14,6 +14,9 @@ namespace AppDiyet.Repo.Configs
         public void Configure(EntityTypeBuilder<FoodCategories> builder)
         {
             builder.Property(x => x.Name).IsRequired().HasColumnType("nvarchar(50)");
+            builder.Ignore(x => x.CreateDate);
+            builder.Ignore(x => x.UpdateDate);
+            builder.Ignore(x => x.DeleteDate);
             builder.HasMany(x => x.Foods).WithOne(x => x.FoodCategories).HasForeignKey(x => x.FoodCategoriesId).OnDelete(DeleteBehavior.NoAction);
         }
     }
