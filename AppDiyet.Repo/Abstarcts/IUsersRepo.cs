@@ -9,7 +9,7 @@ namespace AppDiyet.Repo.Abstarcts
 {
     public interface IUsersRepo : IBaseRepo<Users>
     {
-        //teslim öğlen 12 
+        
         double GetByWeight(int id); 
         double GetByCalories(int id); 
         double GetByProteins(int id); 
