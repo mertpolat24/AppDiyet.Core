@@ -137,27 +137,27 @@ namespace AppDiyet.Repo.Concretes
 
         public double GetByCalories(int id)
         {
-            throw new NotImplementedException();
+            return _context.Foods.Where(f=>f.Id==id).Select(f=>f.Calories).FirstOrDefault();
         }
 
         public List<Meals> GetByMeals(int id)
         {
-            throw new NotImplementedException();
+            return _context.Meals.Where(m=>m.Id == id).ToList();
         }
 
         public List<Users> GetByName(int id)
         {
-            throw new NotImplementedException();
+            return _context.Users.Where(u=>u.Id == id).ToList();
         }
 
         public double GetByProteins(int id)
         {
-            throw new NotImplementedException();
+            return _context.Foods.Where(f=>f.Id == id).Select(f=>f.Proteins).FirstOrDefault();
         }
 
         public double GetByWeight(int id)
         {
-            throw new NotImplementedException();
+            return _context.Foods.Where(f => f.Id == id).Select(f => f.FoodWeight).FirstOrDefault();
         }
     }
 }
