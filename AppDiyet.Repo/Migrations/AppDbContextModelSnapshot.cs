@@ -145,6 +145,9 @@ namespace AppDiyet.Repo.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<int>("Gender")
+                        .HasColumnType("int");
+
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("nvarchar(50)");
@@ -158,6 +161,9 @@ namespace AppDiyet.Repo.Migrations
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("Purpose")
+                        .HasColumnType("int");
 
                     b.Property<decimal>("TargetWeight")
                         .HasColumnType("decimal(5,2)");

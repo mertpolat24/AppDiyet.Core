@@ -113,6 +113,8 @@ namespace AppDiyet.Core.Concretes
                 }
             }
         }
+        public Gender Gender { get; set; }
+        public Purpose Purpose { get; set; }
         public Activities Activities { get; set; }
         public int MealsCount { get; set; }
         public double TargetWeight { get; set; }

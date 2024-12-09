@@ -10,13 +10,14 @@ namespace AppDiyet.Repo.Abstarcts
     public interface IUsersRepo : IBaseRepo<Users>
     {
         //teslim öğlen 12 
-        double GetByWeight(Users users); //Yusuf
-        double GetByCalories(Users users); //Yusuf
-        double GetByProteins(Users users); //Yusuf
-        double CalculateCalories(Users users); //Mert
-        double CalculateProteins(Users users); //Mert
-        double ExceededCalories(Users users); //Mert
-        List<Meals> GetByMeals(Users users); // Mustafa
-        List<Users> GetByName(int Id); // Mustafa
+        double GetByWeight(int id); //Yusuf
+        double GetByCalories(int id); //Yusuf
+        double GetByProteins(int id); //Yusuf
+        double CalculateCalories(int id); 
+        double CalculateProteins(int id); 
+        double DailyCaloriesLimit(int id); 
+        double RemainingCalories(int id); 
+        List<Meals> GetByMeals(int id); // Mustafa
+        List<Users> GetByName(int id); // Mustafa
     }
 }
