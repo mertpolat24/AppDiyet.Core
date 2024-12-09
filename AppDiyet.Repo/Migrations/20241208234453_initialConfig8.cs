@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace AppDiyet.Repo.Migrations
 {
     /// <inheritdoc />
-    public partial class initialConfig6 : Migration
+    public partial class initialConfig8 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
