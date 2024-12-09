@@ -19,6 +19,7 @@ namespace AppDiyet.Repo.Configs
            builder.Property(x => x.FoodWeight).IsRequired().HasColumnType("decimal(7,2)");
            builder.Property(x => x.Description).IsRequired(false).HasColumnType("nvarchar(250)");
            builder.HasOne(x => x.FoodCategories).WithMany(x => x.Foods).HasForeignKey(x => x.FoodCategoriesId);
+           builder.HasMany(x => x.FoodMeals).WithOne(x => x.Food).HasForeignKey(x => x.FoodId);
         }
     }
 }

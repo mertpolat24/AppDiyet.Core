@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace AppDiyet.Repo.Migrations
 {
     /// <inheritdoc />
-    public partial class initialConfig9 : Migration
+    public partial class initialConfig12 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -85,7 +85,7 @@ namespace AppDiyet.Repo.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     MealName = table.Column<int>(type: "int", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false),
-                    FoodId = table.Column<int>(type: "int", nullable: false),
+                    FoodMealsId = table.Column<int>(type: "int", nullable: false),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     DeleteDate = table.Column<DateTime>(type: "datetime2", nullable: true)
@@ -94,27 +94,55 @@ namespace AppDiyet.Repo.Migrations
                 {
                     table.PrimaryKey("PK_Meals", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Meals_Foods_FoodId",
-                        column: x => x.FoodId,
-                        principalTable: "Foods",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
                         name: "FK_Meals_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "Id");
                 });
 
+            migrationBuilder.CreateTable(
+                name: "FoodMeals",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FoodId = table.Column<int>(type: "int", nullable: false),
+                    MealId = table.Column<int>(type: "int", nullable: false),
+                    CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    DeleteDate = table.Column<DateTime>(type: "datetime2", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_FoodMeals", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_FoodMeals_Foods_FoodId",
+                        column: x => x.FoodId,
+                        principalTable: "Foods",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_FoodMeals_Meals_MealId",
+                        column: x => x.MealId,
+                        principalTable: "Meals",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_FoodMeals_FoodId",
+                table: "FoodMeals",
+                column: "FoodId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_FoodMeals_MealId",
+                table: "FoodMeals",
+                column: "MealId");
+
             migrationBuilder.CreateIndex(
                 name: "IX_Foods_FoodCategoriesId",
                 table: "Foods",
                 column: "FoodCategoriesId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Meals_FoodId",
-                table: "Meals",
-                column: "FoodId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Meals_UserId",
@@ -138,16 +166,19 @@ namespace AppDiyet.Repo.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Meals");
+                name: "FoodMeals");
 
             migrationBuilder.DropTable(
                 name: "Foods");
 
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "Meals");
 
             migrationBuilder.DropTable(
                 name: "FoodCategories");
+
+            migrationBuilder.DropTable(
+                name: "Users");
         }
     }
 }

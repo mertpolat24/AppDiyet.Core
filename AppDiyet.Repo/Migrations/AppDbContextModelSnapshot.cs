@@ -82,7 +82,7 @@ namespace AppDiyet.Repo.Migrations
                     b.ToTable("FoodCategories");
                 });
 
-            modelBuilder.Entity("AppDiyet.Core.Concretes.Meals", b =>
+            modelBuilder.Entity("AppDiyet.Core.Concretes.FoodMeals", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -99,6 +99,38 @@ namespace AppDiyet.Repo.Migrations
                     b.Property<int>("FoodId")
                         .HasColumnType("int");
 
+                    b.Property<int>("MealId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FoodId");
+
+                    b.HasIndex("MealId");
+
+                    b.ToTable("FoodMeals");
+                });
+
+            modelBuilder.Entity("AppDiyet.Core.Concretes.Meals", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("FoodMealsId")
+                        .HasColumnType("int");
+
                     b.Property<int>("MealName")
                         .HasColumnType("int");
 
@@ -109,8 +141,6 @@ namespace AppDiyet.Repo.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("FoodId");
 
                     b.HasIndex("UserId");
 
@@ -196,28 +226,49 @@ namespace AppDiyet.Repo.Migrations
                     b.Navigation("FoodCategories");
                 });
 
-            modelBuilder.Entity("AppDiyet.Core.Concretes.Meals", b =>
+            modelBuilder.Entity("AppDiyet.Core.Concretes.FoodMeals", b =>
                 {
                     b.HasOne("AppDiyet.Core.Concretes.Food", "Food")
-                        .WithMany()
+                        .WithMany("FoodMeals")
                         .HasForeignKey("FoodId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("AppDiyet.Core.Concretes.Meals", "Meals")
+                        .WithMany("FoodMeals")
+                        .HasForeignKey("MealId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Food");
+
+                    b.Navigation("Meals");
+                });
+
+            modelBuilder.Entity("AppDiyet.Core.Concretes.Meals", b =>
+                {
                     b.HasOne("AppDiyet.Core.Concretes.Users", "Users")
                         .WithMany("Meals")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
-                    b.Navigation("Food");
-
                     b.Navigation("Users");
+                });
+
+            modelBuilder.Entity("AppDiyet.Core.Concretes.Food", b =>
+                {
+                    b.Navigation("FoodMeals");
                 });
 
             modelBuilder.Entity("AppDiyet.Core.Concretes.FoodCategories", b =>
                 {
                     b.Navigation("Foods");
+                });
+
+            modelBuilder.Entity("AppDiyet.Core.Concretes.Meals", b =>
+                {
+                    b.Navigation("FoodMeals");
                 });
 
             modelBuilder.Entity("AppDiyet.Core.Concretes.Users", b =>
