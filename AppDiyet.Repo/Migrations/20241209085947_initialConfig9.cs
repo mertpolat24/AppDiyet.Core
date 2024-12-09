@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace AppDiyet.Repo.Migrations
 {
     /// <inheritdoc />
-    public partial class initialConfig8 : Migration
+    public partial class initialConfig9 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -37,6 +37,8 @@ namespace AppDiyet.Repo.Migrations
                     Lenght = table.Column<decimal>(type: "decimal(5,2)", nullable: false),
                     Weight = table.Column<decimal>(type: "decimal(5,2)", nullable: false),
                     Age = table.Column<int>(type: "int", nullable: false),
+                    Gender = table.Column<int>(type: "int", nullable: false),
+                    Purpose = table.Column<int>(type: "int", nullable: false),
                     Activities = table.Column<int>(type: "int", nullable: false),
                     MealsCount = table.Column<int>(type: "int", nullable: false),
                     TargetWeight = table.Column<decimal>(type: "decimal(5,2)", nullable: false),
