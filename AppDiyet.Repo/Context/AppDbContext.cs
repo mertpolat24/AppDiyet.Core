@@ -13,7 +13,6 @@ namespace AppDiyet.Repo.Context
     {
         public DbSet<Food> Foods { get; set; }
         public DbSet<FoodCategories> FoodCategories { get; set; }
-        public DbSet<FoodCategoriesMeals> FoodCategoriesMeals { get; }
         public DbSet<Meals> Meals { get; set; } 
         public DbSet<Users> Users { get; set; }
 
@@ -26,7 +25,6 @@ namespace AppDiyet.Repo.Context
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfiguration(new ConfigFood());
             modelBuilder.ApplyConfiguration(new ConfigFoodCategories());
-            modelBuilder.ApplyConfiguration(new ConfigFoodCategoriesMeals());
             modelBuilder.ApplyConfiguration(new ConfigMeals());
             modelBuilder.ApplyConfiguration(new ConfigUsers());
         }

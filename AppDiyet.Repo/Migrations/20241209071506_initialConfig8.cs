@@ -83,6 +83,7 @@ namespace AppDiyet.Repo.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     MealName = table.Column<int>(type: "int", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false),
+                    FoodId = table.Column<int>(type: "int", nullable: false),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     DeleteDate = table.Column<DateTime>(type: "datetime2", nullable: true)
@@ -91,45 +92,27 @@ namespace AppDiyet.Repo.Migrations
                 {
                     table.PrimaryKey("PK_Meals", x => x.Id);
                     table.ForeignKey(
+                        name: "FK_Meals_Foods_FoodId",
+                        column: x => x.FoodId,
+                        principalTable: "Foods",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
                         name: "FK_Meals_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "Id");
                 });
 
-            migrationBuilder.CreateTable(
-                name: "FoodCategoriesMeals",
-                columns: table => new
-                {
-                    FoodCategoriesId = table.Column<int>(type: "int", nullable: false),
-                    MealsId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_FoodCategoriesMeals", x => new { x.FoodCategoriesId, x.MealsId });
-                    table.ForeignKey(
-                        name: "FK_FoodCategoriesMeals_FoodCategories_FoodCategoriesId",
-                        column: x => x.FoodCategoriesId,
-                        principalTable: "FoodCategories",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_FoodCategoriesMeals_Meals_MealsId",
-                        column: x => x.MealsId,
-                        principalTable: "Meals",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_FoodCategoriesMeals_MealsId",
-                table: "FoodCategoriesMeals",
-                column: "MealsId");
-
             migrationBuilder.CreateIndex(
                 name: "IX_Foods_FoodCategoriesId",
                 table: "Foods",
                 column: "FoodCategoriesId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Meals_FoodId",
+                table: "Meals",
+                column: "FoodId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Meals_UserId",
@@ -153,19 +136,16 @@ namespace AppDiyet.Repo.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "FoodCategoriesMeals");
+                name: "Meals");
 
             migrationBuilder.DropTable(
                 name: "Foods");
 
             migrationBuilder.DropTable(
-                name: "Meals");
+                name: "Users");
 
             migrationBuilder.DropTable(
                 name: "FoodCategories");
-
-            migrationBuilder.DropTable(
-                name: "Users");
         }
     }
 }

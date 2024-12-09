@@ -12,6 +12,8 @@ namespace AppDiyet.Core.Concretes
     {
         public MealCategories MealName { get; set; }
         public int UserId { get; set; }
+        public int FoodId { get; set; }
         public Users Users { get; set; }
+        public Food Food { get; set; }
     }
 }
