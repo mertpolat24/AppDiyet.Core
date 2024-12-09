@@ -20,6 +20,8 @@ namespace AppDiyet.Repo.Configs
             builder.Property(x => x.TargetWeight).IsRequired().HasColumnType("decimal(5,2)");
             builder.Property(x => x.Age).IsRequired().HasColumnType("int");
             builder.Property(x => x.Activities).IsRequired().HasConversion<int>();
+            builder.Property(x => x.Purpose).IsRequired().HasConversion<int>();
+            builder.Property(x => x.Gender).IsRequired().HasConversion<int>();
             builder.Property(x => x.MealsCount).IsRequired().HasColumnType("int");  
             builder.HasIndex(x => x.Email).IsUnique();
             builder.HasIndex(x => x.Password).IsUnique();

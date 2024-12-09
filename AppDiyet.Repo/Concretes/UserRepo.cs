@@ -22,22 +22,39 @@ namespace AppDiyet.Repo.Concretes
 
         public double CalculateCalories(int id)
         {
-           var mealsList =  _context.Meals.Include(x => x.Food).Where(x => x.UserId == id && x.CreateDate.Day == DateTime.Now.Day).ToList();
-            if(!mealsList.Any())
+            var mealsList = _context.Meals.Join(_context.FoodMeals, m => m.Id, fm => fm.MealId,(m, fm) => new {m.UserId, m.CreateDate, fm.FoodId}).Join(_context.Foods, fm => fm.FoodId, f => f.Id, (fm,f) => new {fm.CreateDate, fm.UserId,f.Calories}).Where(x => x.UserId == id && x.CreateDate.Day == DateTime.Now.Day).Select(x=> new {x.Calories}).ToList();
+
+            if (!mealsList.Any())
                 return 0;
 
-            double totalCalories = mealsList.Sum(x => x.Food.Calories);
+            
+
+            double totalCalories = 0;
+
+            foreach (var meal in mealsList)
+            {
+                totalCalories += meal.Calories;
+            }
+
             return totalCalories;
+
         }
 
         public double CalculateProteins(int id)
         {
-            var mealsList = _context.Meals.Include(x => x.Food).Where(x => x.UserId == id && x.CreateDate.Day == DateTime.Now.Day).ToList();
-            if (!mealsList.Any())
+            var mealsList2 = _context.Meals.Join(_context.FoodMeals, m => m.Id, fm => fm.MealId, (m, fm) => new { m.UserId, m.CreateDate, fm.FoodId }).Join(_context.Foods, fm => fm.FoodId, f => f.Id, (fm, f) => new { fm.CreateDate, fm.UserId, f.Proteins }).Where(x => x.UserId == id && x.CreateDate.Day == DateTime.Now.Day).Select(x => new { x.Proteins }).ToList();
+            if (!mealsList2.Any())
                 return 0;
 
-            double totalCalories = mealsList.Sum(x => x.Food.Proteins);
-            return totalCalories;
+
+            double totalCalories2 = 0;
+
+            foreach (var meal in mealsList2)
+            {
+                totalCalories2 += meal.Proteins;
+            }
+
+            return totalCalories2;
         }
 
         public double DailyCaloriesLimit(int id)
@@ -66,13 +83,13 @@ namespace AppDiyet.Repo.Concretes
             if (gender == Gender.Male)
                 bmr = ((10 * weight) + (6.25 * lenght) - (5 * age + 5)) * activitiesMultiplier;
             else
-                bmr = ((10 * weight) + (6.25 * lenght) - (5 * age + 5)) * activitiesMultiplier;
+                bmr = ((10 * weight) + (6.25 * lenght) - (5 * age - 121)) * activitiesMultiplier;
 
 
 
             if (purpose == Purpose.GainWeight)
             {
-                if(gender == Gender.Male)
+                if (gender == Gender.Male)
                 {
                     return bmr += 500;
                 }
@@ -82,15 +99,15 @@ namespace AppDiyet.Repo.Concretes
                 }
 
             }
-            else if(purpose == Purpose.LoseWeight)
+            else if (purpose == Purpose.LoseWeight)
             {
                 if (gender == Gender.Male)
                 {
                     return bmr -= 700;
                 }
                 else
-                {  
-                   return bmr -= 500;
+                {
+                    return bmr -= 500;
 
                 }
 
@@ -114,7 +131,7 @@ namespace AppDiyet.Repo.Concretes
         {
             var limit = DailyCaloriesLimit(id);
             var calculate = CalculateCalories(id);
-            var remainCalories = limit -calculate;
+            var remainCalories = limit - calculate;
             return remainCalories;
         }
 

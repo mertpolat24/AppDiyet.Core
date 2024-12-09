@@ -16,5 +16,6 @@ namespace AppDiyet.Core.Concretes
         public string? Description { get; set; }
         public int FoodCategoriesId { get; set; }
         public FoodCategories FoodCategories { get; set; }
+        public ICollection<FoodMeals> FoodMeals { get; set; }
     }
 }

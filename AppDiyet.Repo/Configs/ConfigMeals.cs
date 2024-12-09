@@ -15,7 +15,7 @@ namespace AppDiyet.Repo.Configs
         {
         
             builder.Property(x => x.MealName).IsRequired().HasConversion<int>();
-            builder.HasOne(x => x.Food).WithMany().HasForeignKey(x => x.FoodId);
+            builder.HasMany(x => x.FoodMeals).WithOne(x => x.Meals).HasForeignKey(x => x.MealId);
         }
     }
 }
