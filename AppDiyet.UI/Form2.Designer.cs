@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             kaydetButton = new Button();
             ogunSayisiComboBox = new ComboBox();
             aktiviteDuzeyiComboBox = new ComboBox();
@@ -37,8 +38,8 @@
             hedefComboBox = new ComboBox();
             kadinCheckBox = new CheckBox();
             erkekCheckBox = new CheckBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            adTextBox = new TextBox();
+            soyadTextBox = new TextBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -53,11 +54,15 @@
             label12 = new Label();
             textBox3 = new TextBox();
             textBox4 = new TextBox();
+            ımageList1 = new ImageList(components);
+            pictureBox1 = new PictureBox();
+            button1 = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // kaydetButton
             // 
-            kaydetButton.Location = new Point(423, 599);
+            kaydetButton.Location = new Point(659, 599);
             kaydetButton.Name = "kaydetButton";
             kaydetButton.Size = new Size(94, 42);
             kaydetButton.TabIndex = 26;
@@ -84,21 +89,21 @@
             // 
             // yasTextBox
             // 
-            yasTextBox.Location = new Point(187, 186);
+            yasTextBox.Location = new Point(187, 160);
             yasTextBox.Name = "yasTextBox";
             yasTextBox.Size = new Size(566, 27);
             yasTextBox.TabIndex = 23;
             // 
             // kiloTextBox
             // 
-            kiloTextBox.Location = new Point(187, 228);
+            kiloTextBox.Location = new Point(187, 198);
             kiloTextBox.Name = "kiloTextBox";
             kiloTextBox.Size = new Size(566, 27);
             kiloTextBox.TabIndex = 22;
             // 
             // boyTextBox
             // 
-            boyTextBox.Location = new Point(187, 153);
+            boyTextBox.Location = new Point(187, 232);
             boyTextBox.Name = "boyTextBox";
             boyTextBox.Size = new Size(566, 27);
             boyTextBox.TabIndex = 21;
@@ -132,19 +137,19 @@
             erkekCheckBox.Text = "Erkek";
             erkekCheckBox.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // adTextBox
             // 
-            textBox1.Location = new Point(187, 62);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(566, 27);
-            textBox1.TabIndex = 29;
+            adTextBox.Location = new Point(187, 62);
+            adTextBox.Name = "adTextBox";
+            adTextBox.Size = new Size(566, 27);
+            adTextBox.TabIndex = 29;
             // 
-            // textBox2
+            // soyadTextBox
             // 
-            textBox2.Location = new Point(187, 97);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(566, 27);
-            textBox2.TabIndex = 29;
+            soyadTextBox.Location = new Point(187, 97);
+            soyadTextBox.Name = "soyadTextBox";
+            soyadTextBox.Size = new Size(566, 27);
+            soyadTextBox.TabIndex = 29;
             // 
             // label1
             // 
@@ -242,9 +247,9 @@
             label10.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label10.Location = new Point(12, 379);
             label10.Name = "label10";
-            label10.Size = new Size(126, 20);
+            label10.Size = new Size(115, 20);
             label10.TabIndex = 38;
-            label10.Text = "Aktivite Durumu";
+            label10.Text = "Aktivite Duzeyi";
             // 
             // label11
             // 
@@ -278,11 +283,36 @@
             textBox4.Size = new Size(566, 27);
             textBox4.TabIndex = 41;
             // 
+            // ımageList1
+            // 
+            ımageList1.ColorDepth = ColorDepth.Depth32Bit;
+            ımageList1.ImageSize = new Size(16, 16);
+            ımageList1.TransparentColor = Color.Transparent;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(792, 62);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(164, 197);
+            pictureBox1.TabIndex = 42;
+            pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(827, 278);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 43;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;            
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(982, 653);
+            Controls.Add(button1);
+            Controls.Add(pictureBox1);
             Controls.Add(textBox4);
             Controls.Add(textBox3);
             Controls.Add(label12);
@@ -297,8 +327,8 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(soyadTextBox);
+            Controls.Add(adTextBox);
             Controls.Add(kaydetButton);
             Controls.Add(ogunSayisiComboBox);
             Controls.Add(aktiviteDuzeyiComboBox);
@@ -310,6 +340,7 @@
             Controls.Add(erkekCheckBox);
             Name = "Form2";
             Text = "Form2";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -325,8 +356,8 @@
         private ComboBox hedefComboBox;
         private CheckBox kadinCheckBox;
         private CheckBox erkekCheckBox;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox adTextBox;
+        private TextBox soyadTextBox;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -341,5 +372,8 @@
         private Label label12;
         private TextBox textBox3;
         private TextBox textBox4;
+        private ImageList ımageList1;
+        private PictureBox pictureBox1;
+        private Button button1;
     }
 }

@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace AppDiyet.UI
 {
-    public partial class Form2 : Form
+    public partial class Guncelleme : Form
     {
-        public Form2()
+        public Guncelleme()
         {
             InitializeComponent();
         }
-
-     
     }
 }
