@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             label4 = new Label();
-            button2 = new Button();
-            button1 = new Button();
+            girisButton = new Button();
+            kayitOlButton = new Button();
             checkBox1 = new CheckBox();
             label3 = new Label();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            emailTextBox = new TextBox();
+            sifreTextBox = new TextBox();
             label2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
@@ -51,27 +51,28 @@
             label4.TabIndex = 19;
             label4.Text = "\n\"Kalorini say, sağlığını koru, hayatını değiştir!\"";
             // 
-            // button2
+            // girisButton
             // 
-            button2.BackColor = Color.YellowGreen;
-            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            button2.Location = new Point(709, 378);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 17;
-            button2.Text = "Giriş Yap";
-            button2.UseVisualStyleBackColor = false;
+            girisButton.BackColor = Color.YellowGreen;
+            girisButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            girisButton.Location = new Point(709, 378);
+            girisButton.Name = "girisButton";
+            girisButton.Size = new Size(94, 29);
+            girisButton.TabIndex = 17;
+            girisButton.Text = "Giriş Yap";
+            girisButton.UseVisualStyleBackColor = false;
+            girisButton.Click += girisButton_Click_1;
             // 
-            // button1
+            // kayitOlButton
             // 
-            button1.BackColor = Color.YellowGreen;
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            button1.Location = new Point(709, 554);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 16;
-            button1.Text = "Kayıt Ol";
-            button1.UseVisualStyleBackColor = false;
+            kayitOlButton.BackColor = Color.YellowGreen;
+            kayitOlButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            kayitOlButton.Location = new Point(709, 554);
+            kayitOlButton.Name = "kayitOlButton";
+            kayitOlButton.Size = new Size(94, 29);
+            kayitOlButton.TabIndex = 16;
+            kayitOlButton.Text = "Kayıt Ol";
+            kayitOlButton.UseVisualStyleBackColor = false;
             // 
             // checkBox1
             // 
@@ -94,22 +95,22 @@
             label3.TabIndex = 14;
             label3.Text = "Hala Bir Hesabın Yok Mu?";
             // 
-            // textBox2
+            // emailTextBox
             // 
-            textBox2.BackColor = SystemColors.Window;
-            textBox2.Location = new Point(588, 212);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(337, 27);
-            textBox2.TabIndex = 13;
-            textBox2.Text = "user1@gmail.com";
+            emailTextBox.BackColor = SystemColors.Window;
+            emailTextBox.Location = new Point(588, 212);
+            emailTextBox.Name = "emailTextBox";
+            emailTextBox.Size = new Size(337, 27);
+            emailTextBox.TabIndex = 13;
+            emailTextBox.Text = "user1@gmail.com";
             // 
-            // textBox1
+            // sifreTextBox
             // 
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(588, 284);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(337, 27);
-            textBox1.TabIndex = 12;
+            sifreTextBox.BorderStyle = BorderStyle.FixedSingle;
+            sifreTextBox.Location = new Point(588, 284);
+            sifreTextBox.Name = "sifreTextBox";
+            sifreTextBox.Size = new Size(337, 27);
+            sifreTextBox.TabIndex = 12;
             // 
             // label2
             // 
@@ -147,16 +148,16 @@
             ClientSize = new Size(982, 653);
             Controls.Add(pictureBox1);
             Controls.Add(label4);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(girisButton);
+            Controls.Add(kayitOlButton);
             Controls.Add(checkBox1);
             Controls.Add(label3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(emailTextBox);
+            Controls.Add(sifreTextBox);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "KayitOl";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -165,12 +166,12 @@
         #endregion
 
         private Label label4;
-        private Button button2;
-        private Button button1;
+        private Button girisButton;
+        private Button kayitOlButton;
         private CheckBox checkBox1;
         private Label label3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox emailTextBox;
+        private TextBox sifreTextBox;
         private Label label2;
         private Label label1;
         private PictureBox pictureBox1;

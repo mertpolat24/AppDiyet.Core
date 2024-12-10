@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace AppDiyet.Service.Services
 {
-    internal class UserService : IUserService
+    public class UserService : IUserService
     {
         IUsersRepo repo = new UserRepo(new AppDbContext());
         public double CalculateCalories(int id)

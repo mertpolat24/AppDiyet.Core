@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace AppDiyet.Repo.Migrations
 {
     /// <inheritdoc />
-    public partial class initialConfig19 : Migration
+    public partial class initialConfig20 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -42,6 +42,7 @@ namespace AppDiyet.Repo.Migrations
                     Activities = table.Column<int>(type: "int", nullable: false),
                     MealsCount = table.Column<int>(type: "int", nullable: false),
                     TargetWeight = table.Column<decimal>(type: "decimal(5,2)", nullable: false),
+                    ImagePath = table.Column<string>(type: "nvarchar(350)", nullable: false),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     DeleteDate = table.Column<DateTime>(type: "datetime2", nullable: true)
@@ -62,6 +63,7 @@ namespace AppDiyet.Repo.Migrations
                     Proteins = table.Column<decimal>(type: "decimal(7,2)", nullable: false),
                     FoodAmount = table.Column<decimal>(type: "decimal(7,2)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(250)", nullable: true),
+                    ImagePath = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PortionType = table.Column<int>(type: "int", nullable: false),
                     FoodCategoriesId = table.Column<int>(type: "int", nullable: false),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
