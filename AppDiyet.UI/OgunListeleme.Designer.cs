@@ -278,7 +278,7 @@
             Controls.Add(label3);
             Controls.Add(label1);
             Name = "OgunListeleme";
-            Text = "OgunListeleme";
+            Text = "Öğün Listeleme";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
