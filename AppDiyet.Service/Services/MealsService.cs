@@ -16,14 +16,22 @@ namespace AppDiyet.Service.Services
     internal class MealsService : IMealsService
     {
         IMealsRepo _repo = new MealsRepo(new AppDbContext());
-        public bool Add(Meals meals)
+        public bool Add(MealCategories meals)
         {
-            return _repo.Create(new Meals() { CreateDate = DateTime.Now, MealName = meals.MealName });
+            if (meals > 0)
+            {
+                return _repo.Create(new Meals() { CreateDate = DateTime.Now, MealName = meals });
+            }
+            else
+                return false;
         }
 
         public bool Delete(int id)
         {
-            return _repo.Delete(_repo.GetById(id));
+            if (id > 0)
+                return _repo.Delete(_repo.GetById(id));
+            else
+                return false;
         }
 
         public List<Meals> GetAll()
@@ -38,21 +46,28 @@ namespace AppDiyet.Service.Services
 
         public List<Meals> GetByMeals(DateTime dateTime1, DateTime dateTime2)
         {
-            if (dateTime1 < dateTime2)
+            if (dateTime1 > dateTime2)
                 throw new ArgumentException("Lütfen Tarih Seçimini Kontrol Ediniz");
             else
-                return _repo.GetAll().Where(m=>m.CreateDate >= dateTime1 && m.CreateDate<= dateTime2).ToList();
+                return _repo.GetAll().Where(m => m.CreateDate >= dateTime1 && m.CreateDate <= dateTime2).ToList();
         }
-        public Meals GetByName(Meals meals)
+        public Meals GetByName(MealCategories meals)
         {
-            Meals meal = _repo.GetAll().FirstOrDefault(m => m.MealName == meals.MealName);
+            Meals meal = _repo.GetAll().FirstOrDefault(m => m.MealName == meals);
             return meal;
         }
 
-        public bool Update(int id, Meals meal)
+        public bool Update(int id, MealCategories name, DateTime createDate)
         {
             var meals = _repo.GetById(id);
-            return _repo.Update(meals);
+            if (name > 0 && createDate > DateTime.MinValue)
+            {
+                meals.MealName = name;
+                meals.CreateDate = createDate;
+                return _repo.Update(meals);
+            }
+            else
+                return false;
         }
     }
 }

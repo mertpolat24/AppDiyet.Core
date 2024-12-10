@@ -9,7 +9,7 @@ namespace AppDiyet.Repo.Abstarcts
 {
     public interface IUsersRepo : IBaseRepo<Users>
     {
-        
+        Users GetByEmail(string email);
         double GetByWeight(int id); 
         double GetByCalories(int id); 
         double GetByProteins(int id); 

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AppDiyet.Repo.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241210005340_abcdefg12")]
-    partial class abcdefg12
+    [Migration("20241210112926_initialConfig19")]
+    partial class initialConfig19
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

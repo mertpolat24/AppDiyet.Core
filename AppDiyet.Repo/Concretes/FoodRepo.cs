@@ -55,5 +55,6 @@ namespace AppDiyet.Repo.Concretes
                 return calculatedProteins * oran2;
             }
         }
+        
     }
 }
