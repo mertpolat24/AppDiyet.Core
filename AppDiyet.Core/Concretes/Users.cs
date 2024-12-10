@@ -119,6 +119,7 @@ namespace AppDiyet.Core.Concretes
         public Activities Activities { get; set; }
         public int MealsCount { get; set; }
         public double TargetWeight { get; set; }
+        public string ImagePath { get; set; }
         public ICollection<Meals> Meals { get; set; }
 
     }
