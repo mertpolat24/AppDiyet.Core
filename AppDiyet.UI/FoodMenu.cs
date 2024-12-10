@@ -16,5 +16,10 @@ namespace AppDiyet.UI
         {
             InitializeComponent();
         }
+
+        private void FoodMenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -118,16 +118,28 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Cast Iron Pizza" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cast Iron Pizza.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pngtree-woman-runner-running-jumpingsilhouette-athletic-photo-png-image_13643437" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-woman-runner-running-jumpingsilhouette-athletic-photo-png-image_13643437.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pizzeria-template-header-pizza-img" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pizzeria-template-header-pizza-img.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="123" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\123.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Recep-Ivedik-7-3-e1670719324142" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Recep-Ivedik-7-3-e1670719324142.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pngtree-woman-runner-running-jumpingsilhouette-athletic-photo-png-image_13643437" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pngtree-woman-runner-running-jumpingsilhouette-athletic-photo-png-image_13643437.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Recep-Ivedik-7-3-e16707193241421" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Recep-Ivedik-7-3-e16707193241421.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eksikpizza" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eksikpizza.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cast Iron Pizza" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cast Iron Pizza.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pizza2go-banners" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pizza2go-banners.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
