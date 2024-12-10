@@ -15,8 +15,5 @@ namespace AppDiyet.Repo.Abstarcts
         bool Delete(T entity);
         List<T> GetAll();
         T GetById(int id);
-        bool Any(Expression<Func<T, bool>> predicate);
-        List<TResult> GetFilteredList<TResult>(Expression<Func<T,TResult>> select, Expression<Func<T,bool>> where = null, Func<IQueryable<T>,IOrderedQueryable<T>> orderBy = null);
-
     }
 }

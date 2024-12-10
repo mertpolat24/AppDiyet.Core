@@ -15,8 +15,7 @@ namespace AppDiyet.Core.Concretes
         public double Proteins { get; set; }
         public double FoodAmount { get; set; }
         public string? Description { get; set; }
-
-        //public BinaryData BinaryData { get; set; } Resim eklenecek dokunmayın.
+        public string ImagePath { get; set; }
         public PortionType PortionType { get; set; }
         public int FoodCategoriesId { get; set; }
         public FoodCategories FoodCategories { get; set; }

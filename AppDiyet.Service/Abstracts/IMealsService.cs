@@ -11,10 +11,10 @@ namespace AppDiyet.Service.Abstracts
     public interface IMealsService
     {
         bool Delete(int id);
-        bool Update(int id, Meals meals);
-        bool Add(Meals meal);
+        bool Update(int id, MealCategories name, DateTime createDate);
+        bool Add(MealCategories meals);
         Meals GetById(int id);
-        Meals GetByName(Meals meals);
+        Meals GetByName(MealCategories meals);
         List<Meals> GetAll();
         List<Meals> GetByMeals(DateTime dateTime1, DateTime dateTime2);
 

@@ -22,11 +22,6 @@ namespace AppDiyet.Repo.Concretes
             _dbSet = _dbContext.Set<T>();
         }
 
-        public bool Any(Expression<Func<T, bool>> predicate)
-        {
-            return _dbSet.Any(predicate);
-        }
-
         public bool Create(T entity)
         {
             try
@@ -72,17 +67,6 @@ namespace AppDiyet.Repo.Concretes
         public T GetById(int id)
         {
             return _dbContext.Set<T>().Find(id);
-        }
-
-        public List<TResult> GetFilteredList<TResult>(Expression<Func<T, TResult>> select, Expression<Func<T, bool>> where = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null)
-        {
-            IQueryable<T> query = _dbSet;
-            if (where != null)
-                query = query.Where(where);
-            if (orderBy != null)
-                return orderBy(query).Select(select).ToList();
-            else
-                return query.Select(select).ToList();
         }
 
         public bool Update(T entity)

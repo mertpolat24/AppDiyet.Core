@@ -17,10 +17,5 @@ namespace AppDiyet.Repo.Concretes
         {
             _context = dbContext;
         }
-
-        public List<FoodCategories> GetFoodCategories()
-        {
-            return _context.FoodCategories.ToList();
-        }
     }
 }

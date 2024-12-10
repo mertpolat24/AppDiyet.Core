@@ -159,5 +159,10 @@ namespace AppDiyet.Repo.Concretes
         {
             return _context.Foods.Where(f => f.Id == id).Select(f => f.FoodAmount).FirstOrDefault();
         }
+
+        public Users GetByEmail(string email)
+        {
+            return _context.Users.FirstOrDefault(u => u.Email ==email);
+        }
     }
 }
