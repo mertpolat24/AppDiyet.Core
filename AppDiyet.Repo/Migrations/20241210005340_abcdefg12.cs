@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace AppDiyet.Repo.Migrations
 {
     /// <inheritdoc />
-    public partial class initialConfig12 : Migration
+    public partial class abcdefg12 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -60,8 +60,9 @@ namespace AppDiyet.Repo.Migrations
                     Name = table.Column<string>(type: "nvarchar(50)", nullable: false),
                     Calories = table.Column<decimal>(type: "decimal(7,2)", nullable: false),
                     Proteins = table.Column<decimal>(type: "decimal(7,2)", nullable: false),
-                    FoodWeight = table.Column<decimal>(type: "decimal(7,2)", nullable: false),
+                    FoodAmount = table.Column<decimal>(type: "decimal(7,2)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(250)", nullable: true),
+                    PortionType = table.Column<int>(type: "int", nullable: false),
                     FoodCategoriesId = table.Column<int>(type: "int", nullable: false),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -107,10 +108,7 @@ namespace AppDiyet.Repo.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FoodId = table.Column<int>(type: "int", nullable: false),
-                    MealId = table.Column<int>(type: "int", nullable: false),
-                    CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DeleteDate = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    MealId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
