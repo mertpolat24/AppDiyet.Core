@@ -1,4 +1,5 @@
 ﻿using AppDiyet.Core.Concretes;
+using AppDiyet.Core.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +11,8 @@ namespace AppDiyet.Service.Abstracts
 {
     public interface IUserService
     {
-        bool Create(string firstName, string lastName, string email, string password, int age, double lenght, double weight);
-        bool Update(int id, string email, string password, int age, double lenght, double weight);
+        bool Create(string firstName, string lastName, string email, string password, int age, double lenght, double weight, Gender gender, Purpose purpose, Activities activities, int mealsCount, double targetWeight, string imagePath);
+        bool Update(int id, string email, string password, int age, double lenght, double weight, Activities activities, Purpose purpose, int mealCount, double targetWeight,string imagePath);
         bool Delete(int id);
         List<Users> GetAll();
         Users GetById(int id);

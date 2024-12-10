@@ -1,4 +1,5 @@
 ﻿using AppDiyet.Core.Concretes;
+using AppDiyet.Core.Enums;
 using AppDiyet.Repo.Abstarcts;
 using AppDiyet.Repo.Concretes;
 using AppDiyet.Repo.Context;
@@ -25,7 +26,7 @@ namespace AppDiyet.Service.Services
             return repo.CalculateProteins(id);
         }
 
-        public bool Create(string firstName, string lastName, string email, string password, int age, double lenght, double weight)
+        public bool Create(string firstName, string lastName, string email, string password, int age, double lenght, double weight, Gender gender, Purpose purpose, Activities activities, int mealsCount, double targetWeight, string imagePath)
         {
             var userEmail = repo.GetByEmail(email);
             if (userEmail is null)
@@ -38,7 +39,14 @@ namespace AppDiyet.Service.Services
                     Password = password,
                     Age = age,
                     Lenght = lenght,
-                    Weight = weight
+                    Weight = weight,
+                    Gender = gender,
+                    Purpose = purpose,
+                    Activities = activities,
+                    MealsCount = mealsCount,
+                    TargetWeight = targetWeight,
+                    ImagePath = imagePath
+
                 };
                 return repo.Create(users);
             }
@@ -46,7 +54,7 @@ namespace AppDiyet.Service.Services
             {
                 throw new Exception("Bu email ile kayıtlı olan bir kullanıcı mevcut!");
             }
-           
+
         }
 
         public double DailyCaloriesLimit(int id)
@@ -58,7 +66,7 @@ namespace AppDiyet.Service.Services
         {
             var user = repo.GetById(id);
             return repo.Delete(user);
-            
+
         }
 
         public List<Users> GetAll()
@@ -106,18 +114,28 @@ namespace AppDiyet.Service.Services
             return repo.RemainingCalories(id);
         }
 
-        public bool Update(int id, string email, string password, int age, double lenght, double weight)
+        public bool Update(int id, string email, string password, int age, double lenght, double weight, Activities activities, Purpose purpose, int mealCount, double targetWeight, string imagePath)
         {
             var user = repo.GetById(id);
             if (user is not null)
             {
-                user.Email = email;
-                user.Password = password;
-                user.Age = age;
-                user.Weight = weight;
-                user.Lenght = lenght;
-
-                return true;
+                var email2 = GetByEmail(email);
+                if (email2 is null || email == user.Email)
+                {
+                    user.Email = email;
+                    user.Password = password;
+                    user.Age = age;
+                    user.Weight = weight;
+                    user.Lenght = lenght;
+                    user.Purpose = purpose;
+                    user.TargetWeight = targetWeight;
+                    user.ImagePath = imagePath;
+                    user.Activities = activities;
+                    user.MealsCount = mealCount;
+                    return true;
+                }
+                else
+                    return false;
             }
             else
             {
