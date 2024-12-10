@@ -82,6 +82,7 @@ namespace AppDiyet.Core.Concretes
                     _lenght = value;
                 else
                     throw new Exception("Boyunuz 100 cm ile 250cm arasında olmalıdır!");
+
             }
         }
         public double Weight
