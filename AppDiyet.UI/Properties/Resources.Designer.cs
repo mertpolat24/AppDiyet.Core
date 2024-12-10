@@ -63,9 +63,49 @@ namespace AppDiyet.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _123 {
+            get {
+                object obj = ResourceManager.GetObject("123", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cast_Iron_Pizza {
             get {
                 object obj = ResourceManager.GetObject("Cast Iron Pizza", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eksikpizza {
+            get {
+                object obj = ResourceManager.GetObject("eksikpizza", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pizza2go_banners {
+            get {
+                object obj = ResourceManager.GetObject("pizza2go-banners", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pizzeria_template_header_pizza_img {
+            get {
+                object obj = ResourceManager.GetObject("pizzeria-template-header-pizza-img", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

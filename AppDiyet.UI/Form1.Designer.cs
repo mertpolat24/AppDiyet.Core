@@ -135,7 +135,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.pngtree_woman_runner_running_jumpingsilhouette_athletic_photo_png_image_13643437;
-            pictureBox1.Location = new Point(-362, -37);
+            pictureBox1.Location = new Point(-364, -48);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(888, 840);
             pictureBox1.TabIndex = 20;
@@ -145,6 +145,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Info;
             ClientSize = new Size(982, 653);
             Controls.Add(pictureBox1);
             Controls.Add(label4);
@@ -158,6 +159,7 @@
             Controls.Add(label1);
             Name = "Form1";
             Text = "KayitOl";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
