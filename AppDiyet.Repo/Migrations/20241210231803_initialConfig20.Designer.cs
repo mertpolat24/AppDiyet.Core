@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AppDiyet.Repo.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241210112926_initialConfig19")]
-    partial class initialConfig19
+    [Migration("20241210231803_initialConfig20")]
+    partial class initialConfig20
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -50,6 +50,10 @@ namespace AppDiyet.Repo.Migrations
 
                     b.Property<int>("FoodCategoriesId")
                         .HasColumnType("int");
+
+                    b.Property<string>("ImagePath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -183,6 +187,10 @@ namespace AppDiyet.Repo.Migrations
 
                     b.Property<int>("Gender")
                         .HasColumnType("int");
+
+                    b.Property<string>("ImagePath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(350)");
 
                     b.Property<string>("LastName")
                         .IsRequired()

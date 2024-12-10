@@ -48,6 +48,10 @@ namespace AppDiyet.Repo.Migrations
                     b.Property<int>("FoodCategoriesId")
                         .HasColumnType("int");
 
+                    b.Property<string>("ImagePath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(50)");
@@ -180,6 +184,10 @@ namespace AppDiyet.Repo.Migrations
 
                     b.Property<int>("Gender")
                         .HasColumnType("int");
+
+                    b.Property<string>("ImagePath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(350)");
 
                     b.Property<string>("LastName")
                         .IsRequired()

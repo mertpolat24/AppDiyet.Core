@@ -162,7 +162,7 @@ namespace AppDiyet.Repo.Concretes
 
         public Users GetByEmail(string email)
         {
-            return _context.Users.FirstOrDefault(u => u.Email ==email);
+            return _context.Users.FirstOrDefault(x => x.Email == email);
         }
     }
 }

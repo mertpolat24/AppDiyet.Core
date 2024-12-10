@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace AppDiyet.Service.Services
 {
-    internal class MealsService : IMealsService
+    public class MealsService : IMealsService
     {
         IMealsRepo _repo = new MealsRepo(new AppDbContext());
         public bool Add(MealCategories meals)
