@@ -79,5 +79,25 @@ namespace AppDiyet.UI.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Recep_Ivedik_7_3_e1670719324142 {
+            get {
+                object obj = ResourceManager.GetObject("Recep-Ivedik-7-3-e1670719324142", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Recep_Ivedik_7_3_e16707193241421 {
+            get {
+                object obj = ResourceManager.GetObject("Recep-Ivedik-7-3-e16707193241421", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
