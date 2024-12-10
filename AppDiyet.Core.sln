@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiyet.Core", "AppDiyet.C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiyet.Repo", "AppDiyet.Repo\AppDiyet.Repo.csproj", "{C2AE707F-11FD-475B-98FD-B4F90B1AB0FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppDiyet.Service", "AppDiyet.Service\AppDiyet.Service.csproj", "{10DF7835-4B24-4FEF-BBC0-660FD465695F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiyet.Service", "AppDiyet.Service\AppDiyet.Service.csproj", "{10DF7835-4B24-4FEF-BBC0-660FD465695F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppDiyetForms", "WinFormsApp\AppDiyetForms.csproj", "{B609D855-C9B6-42B4-8033-28DD8084FFA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{10DF7835-4B24-4FEF-BBC0-660FD465695F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10DF7835-4B24-4FEF-BBC0-660FD465695F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10DF7835-4B24-4FEF-BBC0-660FD465695F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B609D855-C9B6-42B4-8033-28DD8084FFA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B609D855-C9B6-42B4-8033-28DD8084FFA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B609D855-C9B6-42B4-8033-28DD8084FFA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B609D855-C9B6-42B4-8033-28DD8084FFA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
