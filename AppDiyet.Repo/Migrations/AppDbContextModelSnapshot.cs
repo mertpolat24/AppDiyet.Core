@@ -42,15 +42,18 @@ namespace AppDiyet.Repo.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(250)");
 
+                    b.Property<decimal>("FoodAmount")
+                        .HasColumnType("decimal(7,2)");
+
                     b.Property<int>("FoodCategoriesId")
                         .HasColumnType("int");
-
-                    b.Property<decimal>("FoodWeight")
-                        .HasColumnType("decimal(7,2)");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("PortionType")
+                        .HasColumnType("int");
 
                     b.Property<decimal>("Proteins")
                         .HasColumnType("decimal(7,2)");

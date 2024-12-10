@@ -9,6 +9,6 @@ namespace AppDiyet.Repo.Abstarcts
 {
     public interface IFoodCategoriesRepo 
     {
-        List<FoodCategories> GetFoodCategories(); // Örnek
+        List<FoodCategories> GetFoodCategories(); 
     }
 }

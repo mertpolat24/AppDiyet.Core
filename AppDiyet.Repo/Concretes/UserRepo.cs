@@ -157,7 +157,7 @@ namespace AppDiyet.Repo.Concretes
 
         public double GetByWeight(int id)
         {
-            return _context.Foods.Where(f => f.Id == id).Select(f => f.FoodWeight).FirstOrDefault();
+            return _context.Foods.Where(f => f.Id == id).Select(f => f.FoodAmount).FirstOrDefault();
         }
     }
 }

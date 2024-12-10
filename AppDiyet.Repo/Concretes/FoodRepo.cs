@@ -18,24 +18,42 @@ namespace AppDiyet.Repo.Concretes
             _context = dbContext;
         }
 
-        public double CalculatePortions(int id, Food weight)
+        public double CalculatePortionsCalories(int id, Food amount, Food portionType)
         {
             var food = _context.Foods.FirstOrDefault(f => f.Id == id);
 
             double calculatedCalori = food.Calories;
-            double calculatedWeight = food.FoodWeight;
+            double calculatedWeight = food.FoodAmount;
 
-            if (calculatedWeight > weight.FoodWeight)
+            if (calculatedWeight > amount.FoodAmount)
             {
-                double oran = calculatedWeight / weight.FoodWeight;
+                double oran = calculatedWeight / amount.FoodAmount;
                 return calculatedCalori / oran;
             }
             else
-            { 
-                double oran2 = weight.FoodWeight / calculatedWeight;
+            {
+                double oran2 = amount.FoodAmount / calculatedWeight;
                 return calculatedCalori * oran2;
             }
-            
+        }
+
+        public double CalculatePortionsProteins(int id, Food amount, Food portionType)
+        {
+            var food = _context.Foods.FirstOrDefault(f => f.Id == id);
+
+            double calculatedProteins = food.Proteins;
+            double calculatedWeight = food.FoodAmount;
+
+            if (calculatedWeight > amount.FoodAmount)
+            {
+                double oran = calculatedWeight / amount.FoodAmount;
+                return calculatedProteins / oran;
+            }
+            else
+            {
+                double oran2 = amount.FoodAmount / calculatedWeight;
+                return calculatedProteins * oran2;
+            }
         }
     }
 }

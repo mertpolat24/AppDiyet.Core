@@ -13,10 +13,9 @@ namespace AppDiyet.Repo.Configs
     {
         public void Configure(EntityTypeBuilder<FoodMeals> builder)
         {
-
             builder.Ignore(x => x.CreateDate);
-            builder.Ignore(x => x.DeleteDate);
             builder.Ignore(x => x.UpdateDate);
+            builder.Ignore(x => x.DeleteDate);
             builder.HasOne(x => x.Food).WithMany(x => x.FoodMeals).HasForeignKey(x => x.FoodId);
             builder.HasOne(x => x.Meals).WithMany(x => x.FoodMeals).HasForeignKey(x => x.MealId);
         }
