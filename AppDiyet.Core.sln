@@ -9,7 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiyet.Repo", "AppDiyet.R
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiyet.Service", "AppDiyet.Service\AppDiyet.Service.csproj", "{10DF7835-4B24-4FEF-BBC0-660FD465695F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppDiyeti.UI", "AppDiyeti.UI\AppDiyeti.UI.csproj", "{A7F3E3E5-A451-4D27-AAE7-3A0F4D8C39B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +28,6 @@ Global
 		{10DF7835-4B24-4FEF-BBC0-660FD465695F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10DF7835-4B24-4FEF-BBC0-660FD465695F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10DF7835-4B24-4FEF-BBC0-660FD465695F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A7F3E3E5-A451-4D27-AAE7-3A0F4D8C39B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A7F3E3E5-A451-4D27-AAE7-3A0F4D8C39B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A7F3E3E5-A451-4D27-AAE7-3A0F4D8C39B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A7F3E3E5-A451-4D27-AAE7-3A0F4D8C39B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
