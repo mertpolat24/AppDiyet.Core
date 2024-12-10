@@ -132,7 +132,6 @@ namespace AppDiyet.Service.Services
                     user.ImagePath = imagePath;
                     user.Activities = activities;
                     user.MealsCount = mealCount;
-
                     return true;
                 }
                 else
