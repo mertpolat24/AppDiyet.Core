@@ -135,9 +135,6 @@ namespace AppDiyet.Repo.Migrations
                     b.Property<DateTime?>("DeleteDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("FoodMealsId")
-                        .HasColumnType("int");
-
                     b.Property<int>("MealName")
                         .HasColumnType("int");
 

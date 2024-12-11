@@ -1,4 +1,5 @@
 ﻿using AppDiyet.Core.Concretes;
+using AppDiyet.Core.Enums;
 using AppDiyet.Repo.Abstarcts;
 using AppDiyet.Repo.Context;
 using System;
@@ -17,14 +18,16 @@ namespace AppDiyet.Repo.Concretes
             _context = dbContext;
         }
 
-        public List<Meals> GetByMeals(DateTime dateTime1, DateTime dateTime2)
+    
+        public List<dynamic> GetByMeals(int id, DateTime dateTime1, DateTime dateTime2)
         {
-            return _context.Meals.Where(m => m.CreateDate>=dateTime1 && m.CreateDate<= dateTime2).ToList(); 
+            return _context.Meals.Join(_context.FoodMeals, m => m.Id, fm => fm.MealId, (m, fm) => new { m.MealName, m.UserId, m.CreateDate, fm.FoodId }).Join(_context.Foods, f => f.FoodId, x => x.Id, (f, x) => new { f.UserId, f.MealName, f.CreateDate, x.Name }).Where(x => x.UserId == id).Where(m => m.CreateDate >= dateTime1 && m.CreateDate <= dateTime2).Select(x => (dynamic)new { x.Name, x.CreateDate, x.MealName }).ToList();
+
         }
 
         public List<dynamic> MealFood(int id)
         {
-            return _context.Meals.Join(_context.FoodMeals, m => m.Id, fm => fm.MealId, (m, fm) => new { m.MealName, m.UserId,m.CreateDate ,fm.FoodId }).Join(_context.Foods, f => f.FoodId, x => x.Id, (f, x) => new { f.UserId, f.MealName,f.CreateDate, x.Name }).Where(x => x.UserId == id).Select(x => (dynamic)new {x.Name,x.CreateDate, x.MealName }).ToList();
+            return _context.Meals.Join(_context.FoodMeals, m => m.Id, fm => fm.MealId, (m, fm) => new { m.MealName, m.UserId, m.CreateDate, fm.FoodId }).Join(_context.Foods, f => f.FoodId, x => x.Id, (f, x) => new { f.UserId, f.MealName, f.CreateDate, x.Name }).Where(x => x.UserId == id).Select(x => (dynamic)new { x.Name, x.CreateDate, x.MealName }).ToList();
         }
     }
 }

@@ -15,10 +15,11 @@ namespace AppDiyet.UI
     public partial class OgunListeleme : Form
     {
         IMealsService mealsService = new MealsService();
-        public OgunListeleme()
+        int userId = 0;
+        public OgunListeleme(int id)
         {
+            userId = id;
             InitializeComponent();
-            OgunList();
         }
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
@@ -32,17 +33,19 @@ namespace AppDiyet.UI
         }
         private void OgunList()
         {
-            var list = mealsService.GetByMeals(dateTimePicker1.Value.Date, dateTimePicker2.Value.Date);
-            listBox1.Text = list.ToString();
-
+            if (button4.Enabled)
+            {
+                var list = mealsService.GetByMeals(userId, bitisTarihiDTP.Value, baslangicTarihiDTP.Value);
+                gecmisOgunlerDataGridView.DataSource = list;
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            OgunList();
+            
         }
 
-        private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void gecmisOgunlerDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

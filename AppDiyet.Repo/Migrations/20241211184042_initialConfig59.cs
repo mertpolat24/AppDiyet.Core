@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace AppDiyet.Repo.Migrations
 {
     /// <inheritdoc />
-    public partial class initialConfig20 : Migration
+    public partial class initialConfig59 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -88,7 +88,6 @@ namespace AppDiyet.Repo.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     MealName = table.Column<int>(type: "int", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false),
-                    FoodMealsId = table.Column<int>(type: "int", nullable: false),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     DeleteDate = table.Column<DateTime>(type: "datetime2", nullable: true)

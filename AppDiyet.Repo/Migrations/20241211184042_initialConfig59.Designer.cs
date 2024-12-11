@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AppDiyet.Repo.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241210231803_initialConfig20")]
-    partial class initialConfig20
+    [Migration("20241211184042_initialConfig59")]
+    partial class initialConfig59
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -137,9 +137,6 @@ namespace AppDiyet.Repo.Migrations
 
                     b.Property<DateTime?>("DeleteDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<int>("FoodMealsId")
-                        .HasColumnType("int");
 
                     b.Property<int>("MealName")
                         .HasColumnType("int");

@@ -44,15 +44,9 @@ namespace AppDiyet.Service.Services
             return _repo.GetById(id);
         }
 
-        public List<Meals> GetByMeals(DateTime dateTime1, DateTime dateTime2)
+        public List<dynamic> GetByMeals(int id, DateTime dateTime1, DateTime dateTime2)
         {
-               var asd = _repo.GetAll().Where(m => m.CreateDate.Date >= dateTime1 && m.CreateDate.Date <= dateTime2).ToList();
-            return asd;
-        }
-        public Meals GetByName(MealCategories meals)
-        {
-            Meals meal = _repo.GetAll().FirstOrDefault(m => m.MealName == meals);
-            return meal;
+            return _repo.GetByMeals(id, dateTime1, dateTime2);
         }
 
         public List<dynamic> MealFood(int id)

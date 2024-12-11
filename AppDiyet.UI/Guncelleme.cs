@@ -18,7 +18,7 @@ namespace AppDiyet.UI
 
         IUserService user = new UserService();
         int userId = 0;
-
+        string newPassword = string.Empty;
         public Guncelleme(int id)
         {
             userId = id;
@@ -59,49 +59,89 @@ namespace AppDiyet.UI
 
         private void degistirButton_Click(object sender, EventArgs e)
         {
-            var loginUser2 = user.GetById(userId);
-            if (sifreTekrarTextBox.Text == sifreTextBox.Text)
+            try
             {
-                loginUser2.Password = sifreTextBox.Text;
+                var loginUser2 = user.GetById(userId);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void guncelleButton_Click(object sender, EventArgs e)
         {
-            var updatedUser = user.GetById(userId);
-
-            if (updatedUser != null)
+            try
             {
+                var updatedUser = user.GetById(userId);
 
-                user.Update(userId, updatedUser.Password, (int)yasNumericUpDown.Value, (double)boyNumericUpDown.Value, (double)kiloNumericUpDown.Value, (Activities)aktiviteDuzeyiComboBox.SelectedItem, (Purpose)hedefComboBox.SelectedItem, (int)ogunSayisiNumericUpDown.Value, (double)hedefKiloNumericUpDown.Value,labelImage.Text);
-
-                MessageBox.Show("Bilgiler başarıyla güncellendi.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (!string.IsNullOrEmpty(sifreTextBox.Text))
+                if (updatedUser != null)
                 {
-                    if (sifreTextBox.Text == sifreTekrarTextBox.Text)
+                    if (sifreTextBox.Text != updatedUser.Password && sifreTekrarTextBox.Text != updatedUser.Password)
                     {
-                        updatedUser.Password = sifreTextBox.Text;
+                        if (sifreTekrarTextBox.Text == sifreTextBox.Text)
+                        {
+                            newPassword = sifreTextBox.Text;
+
+                        }
+                        else
+                            throw new Exception("Şifreler Uyuşmuyor!");
                     }
                     else
+                        throw new Exception("Yeni Şifreinz Eski Şifrenizle Aynı Olamaz");
+                    if (newPassword == string.Empty)
                     {
-                        MessageBox.Show("Şifreler eşleşmiyor!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
+                        newPassword = updatedUser.Password;
                     }
+                    var yas = (int)yasNumericUpDown.Value;
+                    var boy = (double)boyNumericUpDown.Value;
+                    var kilo = (double)kiloNumericUpDown.Value;
+                    var aktivite = (Activities)aktiviteDuzeyiComboBox.SelectedItem;
+                    var hedef = (Purpose)hedefComboBox.SelectedItem;
+                    var ogun = (int)ogunSayisiNumericUpDown.Value;
+                    var hedefKilo = (double)hedefKiloNumericUpDown.Value;
+
+                    bool guncellendiMi = user.Update(userId, newPassword, yas, boy, kilo, aktivite, hedef, ogun, hedefKilo, labelImage.Text);
+                    if (guncellendiMi == true)
+                    {
+                        MessageBox.Show("Bilgiler başarıyla güncellendi.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Menu menu = new Menu(userId);
+                        menu.Show();
+                        this.Close();
+                    }
+                    else
+                        throw new Exception("Güncelleme başarısız!");
+                }
+                else
+                {
+                    throw new Exception("Kullanıcı bulunamadı");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Kullanıcı bulunamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                MessageBox.Show(ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void imageSelectButton_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void kullaniciPictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void imageSelectButton2_Click(object sender, EventArgs e)
+        {
             OpenFileDialog openFileDialog = new OpenFileDialog();
 
             openFileDialog.Filter = "Image Files (*.jpg;*.jpeg;*.png;*.bmp)|*.jpg;*.jpeg;*.png;*.bmp|All Files (*.*)|*.*";
 
-            if (openFileDialog.ShowDialog() == DialogResult.Continue)
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string imagePath = openFileDialog.FileName;
                 MessageBox.Show("Seçilen dosya: " + imagePath, "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);

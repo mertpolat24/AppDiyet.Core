@@ -14,9 +14,8 @@ namespace AppDiyet.Service.Abstracts
         bool Update(int id, MealCategories name, DateTime createDate);
         bool Add(MealCategories meals);
         Meals GetById(int id);
-        Meals GetByName(MealCategories meals);
         List<Meals> GetAll();
-        List<Meals> GetByMeals(DateTime dateTime1, DateTime dateTime2);
+        List<dynamic> GetByMeals(int id, DateTime dateTime1, DateTime dateTime2);
         List<dynamic> MealFood(int id);
 
     }

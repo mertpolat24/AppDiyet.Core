@@ -43,15 +43,16 @@
             textBox4 = new TextBox();
             textBox5 = new TextBox();
             textBox6 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
-            dateTimePicker2 = new DateTimePicker();
+            bitisTarihiDTP = new DateTimePicker();
+            baslangicTarihiDTP = new DateTimePicker();
             pictureBox1 = new PictureBox();
             comboBox1 = new ComboBox();
             label8 = new Label();
             label9 = new Label();
             button4 = new Button();
-            listBox1 = new ListBox();
+            gecmisOgunlerDataGridView = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)gecmisOgunlerDataGridView).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -189,19 +190,20 @@
             textBox6.Size = new Size(296, 27);
             textBox6.TabIndex = 2;
             // 
-            // dateTimePicker1
+            // bitisTarihiDTP
             // 
-            dateTimePicker1.Location = new Point(159, 118);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(250, 27);
-            dateTimePicker1.TabIndex = 4;
+            bitisTarihiDTP.Location = new Point(149, 118);
+            bitisTarihiDTP.Name = "bitisTarihiDTP";
+            bitisTarihiDTP.Size = new Size(250, 27);
+            bitisTarihiDTP.TabIndex = 4;
             // 
-            // dateTimePicker2
+            // baslangicTarihiDTP
             // 
-            dateTimePicker2.Location = new Point(159, 65);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(250, 27);
-            dateTimePicker2.TabIndex = 5;
+            baslangicTarihiDTP.CalendarMonthBackground = SystemColors.ActiveBorder;
+            baslangicTarihiDTP.Location = new Point(149, 65);
+            baslangicTarihiDTP.Name = "baslangicTarihiDTP";
+            baslangicTarihiDTP.Size = new Size(250, 27);
+            baslangicTarihiDTP.TabIndex = 5;
             // 
             // pictureBox1
             // 
@@ -251,14 +253,15 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
-            // listBox1
+            // gecmisOgunlerDataGridView
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(516, 48);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(369, 584);
-            listBox1.TabIndex = 11;
-            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged_1;
+            gecmisOgunlerDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            gecmisOgunlerDataGridView.Location = new Point(530, 42);
+            gecmisOgunlerDataGridView.Name = "gecmisOgunlerDataGridView";
+            gecmisOgunlerDataGridView.RowHeadersWidth = 51;
+            gecmisOgunlerDataGridView.Size = new Size(416, 566);
+            gecmisOgunlerDataGridView.TabIndex = 11;
+            gecmisOgunlerDataGridView.CellContentClick += gecmisOgunlerDataGridView_CellContentClick;
             // 
             // OgunListeleme
             // 
@@ -266,14 +269,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.BlanchedAlmond;
             ClientSize = new Size(982, 653);
-            Controls.Add(listBox1);
+            Controls.Add(gecmisOgunlerDataGridView);
             Controls.Add(button4);
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(comboBox1);
             Controls.Add(pictureBox1);
-            Controls.Add(dateTimePicker2);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(baslangicTarihiDTP);
+            Controls.Add(bitisTarihiDTP);
             Controls.Add(textBox2);
             Controls.Add(textBox6);
             Controls.Add(textBox5);
@@ -292,6 +295,7 @@
             Name = "OgunListeleme";
             Text = "Öğün Listeleme";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)gecmisOgunlerDataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -313,13 +317,13 @@
         private TextBox textBox4;
         private TextBox textBox5;
         private TextBox textBox6;
-        private DateTimePicker dateTimePicker1;
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker bitisTarihiDTP;
+        private DateTimePicker baslangicTarihiDTP;
         private PictureBox pictureBox1;
         private ComboBox comboBox1;
         private Label label8;
         private Label label9;
         private Button button4;
-        private ListBox listBox1;
+        private DataGridView gecmisOgunlerDataGridView;
     }
 }

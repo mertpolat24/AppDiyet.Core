@@ -4,6 +4,7 @@ using AppDiyet.Repo.Abstarcts;
 using AppDiyet.Repo.Concretes;
 using AppDiyet.Repo.Context;
 using AppDiyet.Service.Abstracts;
+using Azure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -114,13 +115,13 @@ namespace AppDiyet.Service.Services
             return repo.RemainingCalories(id);
         }
 
-        public bool Update(int id, string password, int age, double lenght, double weight, Activities activities, Purpose purpose, int mealCount, double targetWeight, string imagePath)
+        public bool Update(int id,string password, int age, double lenght, double weight, Activities activities, Purpose purpose, int mealCount, double targetWeight, string imagePath)
         {
             var user = repo.GetById(id);
             if (user is not null)
             {
-                    user.Password = password;
                     user.Age = age;
+                    user.Password = password;
                     user.Weight = weight;
                     user.Lenght = lenght;
                     user.Purpose = purpose;
@@ -128,12 +129,13 @@ namespace AppDiyet.Service.Services
                     user.ImagePath = imagePath;
                     user.Activities = activities;
                     user.MealsCount = mealCount;
-                    return true;
+                    return repo.Update(user);
             }
             else
             {
-                return false;
+                throw new Exception("Güncelleme işlemi başarısız!");
             }
         }
+
     }
 }
