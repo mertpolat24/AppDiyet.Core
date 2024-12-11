@@ -3,10 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace AppDiyet.Repo.Migrations
 {
     /// <inheritdoc />
-    public partial class initialConfig59 : Migration
+    public partial class intialConfig61 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -126,6 +128,25 @@ namespace AppDiyet.Repo.Migrations
                         principalTable: "Meals",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.InsertData(
+                table: "FoodCategories",
+                columns: new[] { "Id", "Name" },
+                values: new object[,]
+                {
+                    { 1, "Sebze yemekleri" },
+                    { 2, "Et yemekleri" },
+                    { 3, "Kızartmalar" },
+                    { 4, "Kızartmalar" },
+                    { 5, "Hamur işleri" },
+                    { 6, "Meyveler" },
+                    { 7, "Sebzeler" },
+                    { 8, "Hayvansal gıdalar" },
+                    { 9, "Kuruyemişler" },
+                    { 10, "Tatlılar" },
+                    { 11, "İçecekler" },
+                    { 12, "Atıştırmalıklar" }
                 });
 
             migrationBuilder.CreateIndex(
