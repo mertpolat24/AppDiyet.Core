@@ -35,7 +35,6 @@
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
-            button1 = new Button();
             button2 = new Button();
             button3 = new Button();
             textBox1 = new TextBox();
@@ -125,16 +124,6 @@
             label7.TabIndex = 0;
             label7.Text = "Kategori :";
             // 
-            // button1
-            // 
-            button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic);
-            button1.Location = new Point(133, 603);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 1;
-            button1.Text = "Ekle";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
             button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic);
@@ -192,7 +181,7 @@
             // 
             // bitisTarihiDTP
             // 
-            bitisTarihiDTP.Location = new Point(149, 118);
+            bitisTarihiDTP.Location = new Point(133, 119);
             bitisTarihiDTP.Name = "bitisTarihiDTP";
             bitisTarihiDTP.Size = new Size(250, 27);
             bitisTarihiDTP.TabIndex = 4;
@@ -200,7 +189,7 @@
             // baslangicTarihiDTP
             // 
             baslangicTarihiDTP.CalendarMonthBackground = SystemColors.ActiveBorder;
-            baslangicTarihiDTP.Location = new Point(149, 65);
+            baslangicTarihiDTP.Location = new Point(133, 66);
             baslangicTarihiDTP.Name = "baslangicTarihiDTP";
             baslangicTarihiDTP.Size = new Size(250, 27);
             baslangicTarihiDTP.TabIndex = 5;
@@ -227,7 +216,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            label8.Location = new Point(159, 42);
+            label8.Location = new Point(133, 43);
             label8.Name = "label8";
             label8.Size = new Size(119, 20);
             label8.TabIndex = 8;
@@ -237,7 +226,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            label9.Location = new Point(159, 95);
+            label9.Location = new Point(133, 96);
             label9.Name = "label9";
             label9.Size = new Size(83, 20);
             label9.TabIndex = 8;
@@ -245,7 +234,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(315, 151);
+            button4.Location = new Point(133, 161);
             button4.Name = "button4";
             button4.Size = new Size(94, 29);
             button4.TabIndex = 10;
@@ -255,8 +244,9 @@
             // 
             // gecmisOgunlerDataGridView
             // 
+            gecmisOgunlerDataGridView.BackgroundColor = Color.PeachPuff;
             gecmisOgunlerDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            gecmisOgunlerDataGridView.Location = new Point(530, 42);
+            gecmisOgunlerDataGridView.Location = new Point(503, 43);
             gecmisOgunlerDataGridView.Name = "gecmisOgunlerDataGridView";
             gecmisOgunlerDataGridView.RowHeadersWidth = 51;
             gecmisOgunlerDataGridView.Size = new Size(416, 566);
@@ -284,7 +274,6 @@
             Controls.Add(textBox1);
             Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(label7);
             Controls.Add(label5);
@@ -309,7 +298,6 @@
         private Label label5;
         private Label label6;
         private Label label7;
-        private Button button1;
         private Button button2;
         private Button button3;
         private TextBox textBox1;
