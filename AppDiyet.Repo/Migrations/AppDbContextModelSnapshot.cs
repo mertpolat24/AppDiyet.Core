@@ -87,6 +87,68 @@ namespace AppDiyet.Repo.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("FoodCategories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Sebze yemekleri"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Et yemekleri"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Kızartmalar"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "Kızartmalar"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Name = "Hamur işleri"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Name = "Meyveler"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Name = "Sebzeler"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Name = "Hayvansal gıdalar"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Name = "Kuruyemişler"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Name = "Tatlılar"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Name = "İçecekler"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Name = "Atıştırmalıklar"
+                        });
                 });
 
             modelBuilder.Entity("AppDiyet.Core.Concretes.FoodMeals", b =>

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AppDiyet.Repo.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241211184042_initialConfig59")]
-    partial class initialConfig59
+    [Migration("20241211212356_intialConfig61")]
+    partial class intialConfig61
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -90,6 +90,68 @@ namespace AppDiyet.Repo.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("FoodCategories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Sebze yemekleri"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Et yemekleri"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Kızartmalar"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "Kızartmalar"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Name = "Hamur işleri"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Name = "Meyveler"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Name = "Sebzeler"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Name = "Hayvansal gıdalar"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Name = "Kuruyemişler"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Name = "Tatlılar"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Name = "İçecekler"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Name = "Atıştırmalıklar"
+                        });
                 });
 
             modelBuilder.Entity("AppDiyet.Core.Concretes.FoodMeals", b =>
