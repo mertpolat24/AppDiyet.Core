@@ -57,7 +57,9 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = SystemColors.Info;
             label1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            label1.ForeColor = Color.Black;
             label1.Location = new Point(55, 307);
             label1.Name = "label1";
             label1.Size = new Size(74, 23);
@@ -67,7 +69,9 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = SystemColors.Info;
             label2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            label2.ForeColor = Color.Black;
             label2.Location = new Point(74, 343);
             label2.Name = "label2";
             label2.Size = new Size(55, 23);
@@ -77,7 +81,9 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = SystemColors.Info;
             label3.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            label3.ForeColor = Color.Black;
             label3.Location = new Point(55, 270);
             label3.Name = "label3";
             label3.Size = new Size(74, 23);
@@ -87,7 +93,9 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = SystemColors.Info;
             label4.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            label4.ForeColor = Color.Black;
             label4.Location = new Point(16, 237);
             label4.Name = "label4";
             label4.Size = new Size(113, 23);
@@ -97,7 +105,9 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = SystemColors.Info;
             label5.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            label5.ForeColor = Color.Black;
             label5.Location = new Point(60, 200);
             label5.Name = "label5";
             label5.Size = new Size(69, 23);
@@ -107,7 +117,9 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.BackColor = SystemColors.Info;
             label6.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            label6.ForeColor = Color.Black;
             label6.Location = new Point(44, 423);
             label6.Name = "label6";
             label6.Size = new Size(85, 23);
@@ -117,7 +129,9 @@
             // label7
             // 
             label7.AutoSize = true;
+            label7.BackColor = SystemColors.Info;
             label7.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            label7.ForeColor = Color.Black;
             label7.Location = new Point(46, 383);
             label7.Name = "label7";
             label7.Size = new Size(83, 23);
@@ -126,23 +140,25 @@
             // 
             // button2
             // 
+            button2.BackColor = Color.LightGreen;
             button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic);
             button2.Location = new Point(235, 603);
             button2.Name = "button2";
             button2.Size = new Size(94, 29);
             button2.TabIndex = 1;
             button2.Text = "Güncelle";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
+            button3.BackColor = Color.LightGreen;
             button3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic);
             button3.Location = new Point(335, 603);
             button3.Name = "button3";
             button3.Size = new Size(94, 29);
             button3.TabIndex = 1;
             button3.Text = "Sil";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
@@ -234,17 +250,19 @@
             // 
             // button4
             // 
+            button4.BackColor = Color.LightGreen;
+            button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button4.Location = new Point(133, 161);
             button4.Name = "button4";
             button4.Size = new Size(94, 29);
             button4.TabIndex = 10;
             button4.Text = "Filtrele";
-            button4.UseVisualStyleBackColor = true;
+            button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
             // gecmisOgunlerDataGridView
             // 
-            gecmisOgunlerDataGridView.BackgroundColor = Color.PeachPuff;
+            gecmisOgunlerDataGridView.BackgroundColor = Color.Silver;
             gecmisOgunlerDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             gecmisOgunlerDataGridView.Location = new Point(503, 43);
             gecmisOgunlerDataGridView.Name = "gecmisOgunlerDataGridView";
@@ -257,7 +275,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.BlanchedAlmond;
+            BackColor = SystemColors.Info;
             ClientSize = new Size(982, 653);
             Controls.Add(gecmisOgunlerDataGridView);
             Controls.Add(button4);

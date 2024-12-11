@@ -89,7 +89,8 @@
             // 
             // gesmisOgunler
             // 
-            gesmisOgunler.BackColor = Color.YellowGreen;
+            gesmisOgunler.BackColor = Color.LightGreen;
+            gesmisOgunler.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             gesmisOgunler.Location = new Point(549, 524);
             gesmisOgunler.Name = "gesmisOgunler";
             gesmisOgunler.Size = new Size(186, 29);
@@ -100,7 +101,8 @@
             // 
             // ogunEkleButton
             // 
-            ogunEkleButton.BackColor = Color.YellowGreen;
+            ogunEkleButton.BackColor = Color.LightGreen;
+            ogunEkleButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             ogunEkleButton.Location = new Point(761, 524);
             ogunEkleButton.Name = "ogunEkleButton";
             ogunEkleButton.Size = new Size(186, 29);
@@ -190,10 +192,11 @@
             // 
             // bilgiDuzenleButton
             // 
-            bilgiDuzenleButton.BackColor = Color.SandyBrown;
+            bilgiDuzenleButton.BackColor = Color.LightGreen;
+            bilgiDuzenleButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             bilgiDuzenleButton.Location = new Point(108, 223);
             bilgiDuzenleButton.Name = "bilgiDuzenleButton";
-            bilgiDuzenleButton.Size = new Size(136, 43);
+            bilgiDuzenleButton.Size = new Size(136, 31);
             bilgiDuzenleButton.TabIndex = 10;
             bilgiDuzenleButton.Text = "Kullanıcı Bilgileri";
             bilgiDuzenleButton.UseVisualStyleBackColor = false;
@@ -203,7 +206,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Linen;
+            BackColor = SystemColors.Info;
             ClientSize = new Size(982, 653);
             Controls.Add(bilgiDuzenleButton);
             Controls.Add(nameLabel2);

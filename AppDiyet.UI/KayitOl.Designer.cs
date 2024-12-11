@@ -72,9 +72,10 @@
             // kaydetButton
             // 
             kaydetButton.BackColor = Color.LightGreen;
+            kaydetButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             kaydetButton.Location = new Point(724, 554);
             kaydetButton.Name = "kaydetButton";
-            kaydetButton.Size = new Size(94, 43);
+            kaydetButton.Size = new Size(94, 28);
             kaydetButton.TabIndex = 26;
             kaydetButton.Text = "Kayıt Ol";
             kaydetButton.UseVisualStyleBackColor = false;
@@ -262,7 +263,7 @@
             // 
             // imageSelectButton
             // 
-            imageSelectButton.BackColor = Color.Tan;
+            imageSelectButton.BackColor = Color.LightGreen;
             imageSelectButton.Font = new Font("Segoe UI", 8F, FontStyle.Bold);
             imageSelectButton.Location = new Point(506, 356);
             imageSelectButton.Name = "imageSelectButton";
@@ -368,7 +369,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.AntiqueWhite;
+            BackColor = SystemColors.Info;
             ClientSize = new Size(982, 653);
             Controls.Add(radioButton2);
             Controls.Add(radioButton1);
