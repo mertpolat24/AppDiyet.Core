@@ -20,5 +20,9 @@ namespace AppDiyet.Core.Concretes
         public int FoodCategoriesId { get; set; }
         public FoodCategories FoodCategories { get; set; }
         public ICollection<FoodMeals> FoodMeals { get; set; }
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

@@ -61,7 +61,7 @@ namespace AppDiyet.UI
 
         private void ogunEkleButton_Click(object sender, EventArgs e)
         {
-            OgunCrud ogunCrud = new OgunCrud();
+            OgunCrud ogunCrud = new OgunCrud(userId);
             ogunCrud.Show();
             this.Hide();
         }

@@ -20,6 +20,7 @@ namespace AppDiyet.UI
         {
             userId = id;
             InitializeComponent();
+            OgunList();
         }
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)

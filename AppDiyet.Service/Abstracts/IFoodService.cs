@@ -15,8 +15,8 @@ namespace AppDiyet.Service.Abstracts
         bool Delete(int id);
         List<Food> GetAll();
         Food GetById(int id);
-        double CalculatePortionsCalories(int id, Food amount, Food portionType);
-        double CalculatePortionsProteins(int id, Food amount, Food portionType);
+        double CalculatePortionsCalories(int id, Food amount, PortionType portionType);
+        double CalculatePortionsProteins(int id, Food amount, PortionType portionType);
         //test hebele
     }
 }
