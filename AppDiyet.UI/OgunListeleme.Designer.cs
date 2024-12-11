@@ -191,14 +191,14 @@
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(133, 147);
+            dateTimePicker1.Location = new Point(159, 118);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(250, 27);
             dateTimePicker1.TabIndex = 4;
             // 
             // dateTimePicker2
             // 
-            dateTimePicker2.Location = new Point(133, 94);
+            dateTimePicker2.Location = new Point(159, 65);
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(250, 27);
             dateTimePicker2.TabIndex = 5;
@@ -225,7 +225,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            label8.Location = new Point(133, 71);
+            label8.Location = new Point(159, 42);
             label8.Name = "label8";
             label8.Size = new Size(119, 20);
             label8.TabIndex = 8;
@@ -235,7 +235,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            label9.Location = new Point(133, 124);
+            label9.Location = new Point(159, 95);
             label9.Name = "label9";
             label9.Size = new Size(83, 20);
             label9.TabIndex = 8;
@@ -243,18 +243,18 @@
             // 
             // button4
             // 
-            button4.Location = new Point(408, 145);
+            button4.Location = new Point(315, 151);
             button4.Name = "button4";
             button4.Size = new Size(94, 29);
             button4.TabIndex = 10;
-            button4.Text = "button4";
+            button4.Text = "Filtrele";
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
             // listBox1
             // 
             listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(560, 49);
+            listBox1.Location = new Point(516, 48);
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(369, 584);
             listBox1.TabIndex = 11;
