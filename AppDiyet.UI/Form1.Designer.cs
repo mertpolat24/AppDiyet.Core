@@ -53,7 +53,7 @@
             // 
             // girisButton
             // 
-            girisButton.BackColor = Color.YellowGreen;
+            girisButton.BackColor = Color.LightGreen;
             girisButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             girisButton.Location = new Point(709, 378);
             girisButton.Name = "girisButton";
@@ -65,7 +65,7 @@
             // 
             // kayitOlButton
             // 
-            kayitOlButton.BackColor = Color.YellowGreen;
+            kayitOlButton.BackColor = Color.LightGreen;
             kayitOlButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             kayitOlButton.Location = new Point(709, 554);
             kayitOlButton.Name = "kayitOlButton";

@@ -6,6 +6,9 @@ namespace AppDiyet.UI
     public partial class Form1 : Form
     {
         IUserService userService = new UserService();
+
+        private string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "user_credentials.txt");
+
         public Form1()
         {
             InitializeComponent();
@@ -68,7 +71,29 @@ namespace AppDiyet.UI
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            if (File.Exists(filePath))
+            {
+                string[] credentials = File.ReadAllLines(filePath);
+                if (credentials.Length == 3)
+                {
+                    string username = credentials[0];
+                    string password = credentials[1];
+                    bool rememberMe = bool.Parse(credentials[2]);
 
+                    if (rememberMe)
+                    {
+                        emailTextBox.Text = username;
+                        sifreTextBox.Text = password;
+                        checkBox1.Checked = true;
+                    }
+                    else
+                    {
+                        emailTextBox.Clear();
+                        sifreTextBox.Clear();
+                        checkBox1.Checked = false;
+                    }
+                }
+            }
         }
 
         private void kayitOlButton_Click_1(object sender, EventArgs e)

@@ -63,7 +63,7 @@
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            label11.Location = new Point(34, 164);
+            label11.Location = new Point(64, 213);
             label11.Name = "label11";
             label11.Size = new Size(82, 20);
             label11.TabIndex = 62;
@@ -73,7 +73,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label10.Location = new Point(34, 99);
+            label10.Location = new Point(31, 111);
             label10.Name = "label10";
             label10.Size = new Size(115, 20);
             label10.TabIndex = 61;
@@ -83,7 +83,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label6.Location = new Point(34, 265);
+            label6.Location = new Point(110, 284);
             label6.Name = "label6";
             label6.Size = new Size(36, 20);
             label6.TabIndex = 59;
@@ -93,7 +93,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label8.Location = new Point(34, 232);
+            label8.Location = new Point(56, 248);
             label8.Name = "label8";
             label8.Size = new Size(90, 20);
             label8.TabIndex = 58;
@@ -103,7 +103,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label7.Location = new Point(34, 299);
+            label7.Location = new Point(114, 319);
             label7.Name = "label7";
             label7.Size = new Size(32, 20);
             label7.TabIndex = 56;
@@ -113,7 +113,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label5.Location = new Point(34, 131);
+            label5.Location = new Point(110, 178);
             label5.Name = "label5";
             label5.Size = new Size(36, 20);
             label5.TabIndex = 55;
@@ -123,7 +123,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label4.Location = new Point(34, 197);
+            label4.Location = new Point(95, 144);
             label4.Name = "label4";
             label4.Size = new Size(51, 20);
             label4.TabIndex = 60;
@@ -131,8 +131,9 @@
             // 
             // guncelleButton
             // 
-            guncelleButton.BackColor = Color.DarkTurquoise;
-            guncelleButton.Location = new Point(167, 403);
+            guncelleButton.BackColor = Color.LightGreen;
+            guncelleButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            guncelleButton.Location = new Point(175, 489);
             guncelleButton.Name = "guncelleButton";
             guncelleButton.Size = new Size(94, 29);
             guncelleButton.TabIndex = 50;
@@ -144,14 +145,14 @@
             // 
             aktiviteDuzeyiComboBox.FormattingEnabled = true;
             aktiviteDuzeyiComboBox.Items.AddRange(new object[] { "Masa başı bir işte çalışıyorum, fazla hareket etmiyorum.", "Masa başı bir işte çalışıyorum, hafif egzersizler yapıyorum.", "Az hareket ettiğim bir işte çalışıyorum, yoğun egzersizler yapıyorum.", "Çok aktif olduğum bir işim var, orta düzeyde egzersiz yapıyorum.", "Çok aktif olduğum bir işim var, yoğun düzeyde egzersiz yapıyorum.", "" });
-            aktiviteDuzeyiComboBox.Location = new Point(167, 91);
+            aktiviteDuzeyiComboBox.Location = new Point(175, 103);
             aktiviteDuzeyiComboBox.Name = "aktiviteDuzeyiComboBox";
             aktiviteDuzeyiComboBox.Size = new Size(566, 28);
             aktiviteDuzeyiComboBox.TabIndex = 48;
             // 
             // sifreTekrarTextBox
             // 
-            sifreTekrarTextBox.Location = new Point(167, 370);
+            sifreTekrarTextBox.Location = new Point(175, 437);
             sifreTekrarTextBox.Name = "sifreTekrarTextBox";
             sifreTekrarTextBox.Size = new Size(187, 27);
             sifreTekrarTextBox.TabIndex = 47;
@@ -159,14 +160,15 @@
             // hedefComboBox
             // 
             hedefComboBox.FormattingEnabled = true;
-            hedefComboBox.Location = new Point(167, 193);
+            hedefComboBox.Location = new Point(175, 136);
             hedefComboBox.Name = "hedefComboBox";
             hedefComboBox.Size = new Size(566, 28);
             hedefComboBox.TabIndex = 44;
             // 
             // kullaniciPictureBox
             // 
-            kullaniciPictureBox.Location = new Point(805, 91);
+            kullaniciPictureBox.BackColor = Color.FromArgb(255, 192, 128);
+            kullaniciPictureBox.Location = new Point(805, 103);
             kullaniciPictureBox.Name = "kullaniciPictureBox";
             kullaniciPictureBox.Size = new Size(154, 173);
             kullaniciPictureBox.SizeMode = PictureBoxSizeMode.CenterImage;
@@ -178,7 +180,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            label1.Location = new Point(34, 344);
+            label1.Location = new Point(73, 411);
             label1.Name = "label1";
             label1.Size = new Size(73, 20);
             label1.TabIndex = 68;
@@ -188,7 +190,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            label2.Location = new Point(34, 378);
+            label2.Location = new Point(26, 444);
             label2.Name = "label2";
             label2.Size = new Size(120, 20);
             label2.TabIndex = 68;
@@ -196,7 +198,7 @@
             // 
             // sifreTextBox
             // 
-            sifreTextBox.Location = new Point(167, 337);
+            sifreTextBox.Location = new Point(175, 404);
             sifreTextBox.Name = "sifreTextBox";
             sifreTextBox.Size = new Size(187, 27);
             sifreTextBox.TabIndex = 47;
@@ -204,16 +206,16 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 12F);
-            label9.Location = new Point(34, 27);
+            label9.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label9.Location = new Point(20, 38);
             label9.Name = "label9";
-            label9.Size = new Size(112, 28);
+            label9.Size = new Size(126, 28);
             label9.TabIndex = 71;
             label9.Text = "Kişi Bilgileri";
             // 
             // kiloNumericUpDown
             // 
-            kiloNumericUpDown.Location = new Point(167, 128);
+            kiloNumericUpDown.Location = new Point(175, 171);
             kiloNumericUpDown.Margin = new Padding(3, 4, 3, 4);
             kiloNumericUpDown.Maximum = new decimal(new int[] { 250, 0, 0, 0 });
             kiloNumericUpDown.Name = "kiloNumericUpDown";
@@ -223,7 +225,7 @@
             // 
             // hedefKiloNumericUpDown
             // 
-            hedefKiloNumericUpDown.Location = new Point(167, 161);
+            hedefKiloNumericUpDown.Location = new Point(175, 206);
             hedefKiloNumericUpDown.Margin = new Padding(3, 4, 3, 4);
             hedefKiloNumericUpDown.Maximum = new decimal(new int[] { 250, 0, 0, 0 });
             hedefKiloNumericUpDown.Name = "hedefKiloNumericUpDown";
@@ -232,7 +234,7 @@
             // 
             // ogunSayisiNumericUpDown
             // 
-            ogunSayisiNumericUpDown.Location = new Point(167, 229);
+            ogunSayisiNumericUpDown.Location = new Point(175, 241);
             ogunSayisiNumericUpDown.Margin = new Padding(3, 4, 3, 4);
             ogunSayisiNumericUpDown.Name = "ogunSayisiNumericUpDown";
             ogunSayisiNumericUpDown.Size = new Size(137, 27);
@@ -240,7 +242,7 @@
             // 
             // boyNumericUpDown
             // 
-            boyNumericUpDown.Location = new Point(167, 265);
+            boyNumericUpDown.Location = new Point(175, 276);
             boyNumericUpDown.Margin = new Padding(3, 4, 3, 4);
             boyNumericUpDown.Maximum = new decimal(new int[] { 250, 0, 0, 0 });
             boyNumericUpDown.Name = "boyNumericUpDown";
@@ -249,7 +251,7 @@
             // 
             // yasNumericUpDown
             // 
-            yasNumericUpDown.Location = new Point(167, 304);
+            yasNumericUpDown.Location = new Point(175, 311);
             yasNumericUpDown.Margin = new Padding(3, 4, 3, 4);
             yasNumericUpDown.Name = "yasNumericUpDown";
             yasNumericUpDown.Size = new Size(137, 27);
@@ -265,19 +267,21 @@
             // 
             // imageSelectButton2
             // 
-            imageSelectButton2.Location = new Point(833, 319);
+            imageSelectButton2.BackColor = Color.LightGreen;
+            imageSelectButton2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            imageSelectButton2.Location = new Point(865, 295);
             imageSelectButton2.Name = "imageSelectButton2";
             imageSelectButton2.Size = new Size(94, 29);
             imageSelectButton2.TabIndex = 74;
             imageSelectButton2.Text = "Resim Seç";
-            imageSelectButton2.UseVisualStyleBackColor = true;
+            imageSelectButton2.UseVisualStyleBackColor = false;
             imageSelectButton2.Click += imageSelectButton2_Click;
             // 
             // Guncelleme
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Azure;
+            BackColor = SystemColors.Info;
             ClientSize = new Size(982, 653);
             Controls.Add(imageSelectButton2);
             Controls.Add(labelImage);
