@@ -18,13 +18,24 @@ namespace AppDiyet.UI
 
         IUserService user = new UserService();
         int userId = 0;
+
         public Guncelleme(int id)
         {
             userId = id;
             InitializeComponent();
             AktiviteVerileriniYukle();
             HedefVerileriniYukle();
+            var loginUser = user.GetById(userId);
+            kiloNumericUpDown.Value = (decimal)loginUser.Weight;
+            hedefKiloNumericUpDown.Value = (decimal)loginUser.TargetWeight;
+            ogunSayisiNumericUpDown.Value = loginUser.MealsCount;
+            boyNumericUpDown.Value = (decimal)loginUser.Lenght;
+            yasNumericUpDown.Value = (int)loginUser.Age;
+            kullaniciPictureBox.ImageLocation = loginUser.ImagePath;
+
         }
+
+
 
         public void AktiviteVerileriniYukle()
         {
@@ -40,6 +51,63 @@ namespace AppDiyet.UI
         private void aktiviteDuzeyiComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             aktiviteDuzeyiComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+        private void kiloNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void degistirButton_Click(object sender, EventArgs e)
+        {
+            var loginUser2 = user.GetById(userId);
+            if (sifreTekrarTextBox.Text == sifreTextBox.Text)
+            {
+                loginUser2.Password = sifreTextBox.Text;
+            }
+        }
+
+        private void guncelleButton_Click(object sender, EventArgs e)
+        {
+            var updatedUser = user.GetById(userId);
+
+            if (updatedUser != null)
+            {
+
+                user.Update(userId, updatedUser.Password, (int)yasNumericUpDown.Value, (double)boyNumericUpDown.Value, (double)kiloNumericUpDown.Value, (Activities)aktiviteDuzeyiComboBox.SelectedItem, (Purpose)hedefComboBox.SelectedItem, (int)ogunSayisiNumericUpDown.Value, (double)hedefKiloNumericUpDown.Value,labelImage.Text);
+
+                MessageBox.Show("Bilgiler başarıyla güncellendi.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (!string.IsNullOrEmpty(sifreTextBox.Text))
+                {
+                    if (sifreTextBox.Text == sifreTekrarTextBox.Text)
+                    {
+                        updatedUser.Password = sifreTextBox.Text;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Şifreler eşleşmiyor!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Kullanıcı bulunamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void imageSelectButton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            openFileDialog.Filter = "Image Files (*.jpg;*.jpeg;*.png;*.bmp)|*.jpg;*.jpeg;*.png;*.bmp|All Files (*.*)|*.*";
+
+            if (openFileDialog.ShowDialog() == DialogResult.Continue)
+            {
+                string imagePath = openFileDialog.FileName;
+                MessageBox.Show("Seçilen dosya: " + imagePath, "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                kullaniciPictureBox.ImageLocation = imagePath;
+                labelImage.Text = imagePath;
+            }
         }
     }
 }

@@ -114,15 +114,11 @@ namespace AppDiyet.Service.Services
             return repo.RemainingCalories(id);
         }
 
-        public bool Update(int id, string email, string password, int age, double lenght, double weight, Activities activities, Purpose purpose, int mealCount, double targetWeight, string imagePath)
+        public bool Update(int id, string password, int age, double lenght, double weight, Activities activities, Purpose purpose, int mealCount, double targetWeight, string imagePath)
         {
             var user = repo.GetById(id);
             if (user is not null)
             {
-                var email2 = GetByEmail(email);
-                if (email2 is null || email == user.Email)
-                {
-                    user.Email = email;
                     user.Password = password;
                     user.Age = age;
                     user.Weight = weight;
@@ -133,9 +129,6 @@ namespace AppDiyet.Service.Services
                     user.Activities = activities;
                     user.MealsCount = mealCount;
                     return true;
-                }
-                else
-                    return false;
             }
             else
             {

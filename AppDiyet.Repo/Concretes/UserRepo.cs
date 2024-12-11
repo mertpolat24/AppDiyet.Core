@@ -79,13 +79,10 @@ namespace AppDiyet.Repo.Concretes
             else
                 activitiesMultiplier = 1.9;
 
-
             if (gender == Gender.Male)
                 bmr = ((10 * weight) + (6.25 * lenght) - (5 * age + 5)) * activitiesMultiplier;
             else
                 bmr = ((10 * weight) + (6.25 * lenght) - (5 * age - 121)) * activitiesMultiplier;
-
-
 
             if (purpose == Purpose.GainWeight)
             {
@@ -126,7 +123,6 @@ namespace AppDiyet.Repo.Concretes
             }
 
         }
-
         public double RemainingCalories(int id)
         {
             var limit = DailyCaloriesLimit(id);
