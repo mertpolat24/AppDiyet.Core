@@ -140,9 +140,10 @@ namespace AppDiyet.Repo.Concretes
             return _context.Foods.Where(f=>f.Id==id).Select(f=>f.Calories).FirstOrDefault();
         }
 
-        public List<Meals> GetByMeals(int id)
+        public List<MealCategories> GetByMeals(int id)
         {
-            return _context.Meals.Where(m=>m.Id == id).ToList();
+            return _context.Meals.Where(m=>m.Id == id).Where(x => x.CreateDate.Date == DateTime.Now.Date).Select(x => x.MealName).ToList();
+           
         }
 
         public List<Users> GetByName(int id)

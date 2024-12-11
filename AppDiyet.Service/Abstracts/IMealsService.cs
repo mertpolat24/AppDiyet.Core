@@ -17,6 +17,7 @@ namespace AppDiyet.Service.Abstracts
         Meals GetByName(MealCategories meals);
         List<Meals> GetAll();
         List<Meals> GetByMeals(DateTime dateTime1, DateTime dateTime2);
+        List<dynamic> MealFood(int id);
 
     }
 }

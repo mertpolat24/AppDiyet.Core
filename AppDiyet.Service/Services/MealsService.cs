@@ -55,6 +55,11 @@ namespace AppDiyet.Service.Services
             return meal;
         }
 
+        public List<dynamic> MealFood(int id)
+        {
+            return _repo.MealFood(id);
+        }
+
         public bool Update(int id, MealCategories name, DateTime createDate)
         {
             var meals = _repo.GetById(id);

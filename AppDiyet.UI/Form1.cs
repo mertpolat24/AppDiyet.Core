@@ -57,16 +57,25 @@ namespace AppDiyet.UI
                 }
                 else
                 {
-                    Menu menu = new Menu();
+                    var id = user.Id;
+                    Menu menu = new Menu(id);
                     menu.Show();
                     this.Hide();
                 }
+
             }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void kayitOlButton_Click_1(object sender, EventArgs e)
+        {
+            KayitOl kayitOl = new KayitOl();
+            kayitOl.Show();
+            this.Hide();
         }
     }
 }

@@ -36,14 +36,16 @@
             gesmisOgunler = new Button();
             ogunEkleButton = new Button();
             pictureBox1 = new PictureBox();
-            dataGridView1 = new DataGridView();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
             textBox4 = new TextBox();
             textBox5 = new TextBox();
+            idLabel = new Label();
+            ogunDataGridView = new DataGridView();
+            nameLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ogunDataGridView).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -127,15 +129,6 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(606, 178);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(338, 443);
-            dataGridView1.TabIndex = 3;
-            // 
             // textBox1
             // 
             textBox1.Enabled = false;
@@ -144,6 +137,7 @@
             textBox1.ReadOnly = true;
             textBox1.Size = new Size(125, 27);
             textBox1.TabIndex = 5;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
@@ -181,17 +175,47 @@
             textBox5.Size = new Size(125, 27);
             textBox5.TabIndex = 5;
             // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new Point(860, 1);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new Size(22, 20);
+            idLabel.TabIndex = 6;
+            idLabel.Text = "Id";
+            idLabel.Click += idLabel_Click;
+            // 
+            // ogunDataGridView
+            // 
+            ogunDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            ogunDataGridView.Location = new Point(561, 209);
+            ogunDataGridView.Name = "ogunDataGridView";
+            ogunDataGridView.RowHeadersWidth = 51;
+            ogunDataGridView.Size = new Size(398, 432);
+            ogunDataGridView.TabIndex = 7;
+            ogunDataGridView.CellContentClick += ogunDataGridView_CellContentClick;
+            // 
+            // nameLabel
+            // 
+            nameLabel.AutoSize = true;
+            nameLabel.Location = new Point(601, 60);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new Size(0, 20);
+            nameLabel.TabIndex = 8;
+            // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(982, 653);
+            Controls.Add(nameLabel);
+            Controls.Add(ogunDataGridView);
+            Controls.Add(idLabel);
             Controls.Add(textBox5);
             Controls.Add(textBox4);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
-            Controls.Add(dataGridView1);
             Controls.Add(pictureBox1);
             Controls.Add(ogunEkleButton);
             Controls.Add(gesmisOgunler);
@@ -203,7 +227,7 @@
             Name = "Menu";
             Text = "Menu";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ogunDataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -218,11 +242,13 @@
         private Button gesmisOgunler;
         private Button ogunEkleButton;
         private PictureBox pictureBox1;
-        private DataGridView dataGridView1;
         private TextBox textBox1;
         private TextBox textBox2;
         private TextBox textBox3;
         private TextBox textBox4;
         private TextBox textBox5;
+        private Label idLabel;
+        private DataGridView ogunDataGridView;
+        private Label nameLabel;
     }
 }
