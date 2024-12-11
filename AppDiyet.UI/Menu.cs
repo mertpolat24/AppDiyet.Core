@@ -16,7 +16,7 @@ namespace AppDiyet.UI
 {
     public partial class Menu : Form
     {
-        OgunListeleme OgunListeleme = new OgunListeleme();
+
         IUserService user = new UserService();
         IMealsService meals = new MealsService();
         int userId = 0;
@@ -25,13 +25,16 @@ namespace AppDiyet.UI
             userId = id;
             InitializeComponent();
 
+            var name = user.GetById(userId);
+            nameLabel2.Text = name.FirstName + "" + name.LastName;
+
             idLabel.Text = userId.ToString();
             var loginUser = user.GetById(userId);
             var weight = loginUser.Weight;
             textBox1.Text = weight.ToString("F2");
 
-            var fullName = user.GetById(userId);
-            nameLabel.Text = fullName.FirstName + " " + fullName.LastName;
+            var loginnedUser = user.GetById(userId);
+            nameLabel2.Text = loginnedUser.FirstName + " " + loginnedUser.LastName;
 
             var calories = user.CalculateCalories(userId);
             textBox2.Text = calories.ToString("F2");
@@ -45,10 +48,13 @@ namespace AppDiyet.UI
             var lst = meals.MealFood(userId);
             ogunDataGridView.DataSource = lst;
 
+            var picturePath = loginnedUser.ImagePath;
+            pictureBox1.ImageLocation = picturePath;
+
         }
         private void gesmisOgunler_Click(object sender, EventArgs e)
         {
-            OgunListeleme ogunListeleme = new OgunListeleme();
+            OgunListeleme ogunListeleme = new OgunListeleme(userId);
             ogunListeleme.Show();
             this.Hide();
         }
@@ -60,12 +66,7 @@ namespace AppDiyet.UI
             this.Hide();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            Guncelleme guncelleme = new Guncelleme(userId);
-            guncelleme.Show();
-            this.Hide();
-        }
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -90,7 +91,30 @@ namespace AppDiyet.UI
 
         private void ogunDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-          
+
+        }
+
+        private void bilgiDuzenleButton_Click(object sender, EventArgs e)
+        {
+            Guncelleme guncelleme = new Guncelleme(userId);
+            guncelleme.Show();
+            this.Hide();
+        }
+
+        private void Menu_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nameLabel2_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

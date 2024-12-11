@@ -43,7 +43,8 @@
             textBox5 = new TextBox();
             idLabel = new Label();
             ogunDataGridView = new DataGridView();
-            nameLabel = new Label();
+            nameLabel2 = new Label();
+            bilgiDuzenleButton = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ogunDataGridView).BeginInit();
             SuspendLayout();
@@ -121,7 +122,7 @@
             // pictureBox1
             // 
             pictureBox1.Cursor = Cursors.Hand;
-            pictureBox1.Location = new Point(808, 24);
+            pictureBox1.Location = new Point(702, 49);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(136, 134);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -178,7 +179,7 @@
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new Point(860, 1);
+            idLabel.Location = new Point(948, 9);
             idLabel.Name = "idLabel";
             idLabel.Size = new Size(22, 20);
             idLabel.TabIndex = 6;
@@ -188,27 +189,40 @@
             // ogunDataGridView
             // 
             ogunDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            ogunDataGridView.Location = new Point(561, 209);
+            ogunDataGridView.Location = new Point(561, 238);
             ogunDataGridView.Name = "ogunDataGridView";
             ogunDataGridView.RowHeadersWidth = 51;
-            ogunDataGridView.Size = new Size(398, 432);
+            ogunDataGridView.Size = new Size(398, 403);
             ogunDataGridView.TabIndex = 7;
             ogunDataGridView.CellContentClick += ogunDataGridView_CellContentClick;
             // 
-            // nameLabel
+            // nameLabel2
             // 
-            nameLabel.AutoSize = true;
-            nameLabel.Location = new Point(601, 60);
-            nameLabel.Name = "nameLabel";
-            nameLabel.Size = new Size(0, 20);
-            nameLabel.TabIndex = 8;
+            nameLabel2.AutoSize = true;
+            nameLabel2.Location = new Point(747, 9);
+            nameLabel2.Name = "nameLabel2";
+            nameLabel2.Size = new Size(36, 20);
+            nameLabel2.TabIndex = 9;
+            nameLabel2.Text = "isim";
+            nameLabel2.Click += nameLabel2_Click;
+            // 
+            // bilgiDuzenleButton
+            // 
+            bilgiDuzenleButton.Location = new Point(702, 189);
+            bilgiDuzenleButton.Name = "bilgiDuzenleButton";
+            bilgiDuzenleButton.Size = new Size(136, 43);
+            bilgiDuzenleButton.TabIndex = 10;
+            bilgiDuzenleButton.Text = "Kullanıcı Bilgileri";
+            bilgiDuzenleButton.UseVisualStyleBackColor = true;
+            bilgiDuzenleButton.Click += bilgiDuzenleButton_Click;
             // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(982, 653);
-            Controls.Add(nameLabel);
+            Controls.Add(bilgiDuzenleButton);
+            Controls.Add(nameLabel2);
             Controls.Add(ogunDataGridView);
             Controls.Add(idLabel);
             Controls.Add(textBox5);
@@ -226,6 +240,7 @@
             Controls.Add(label1);
             Name = "Menu";
             Text = "Menu";
+            Load += Menu_Load_1;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)ogunDataGridView).EndInit();
             ResumeLayout(false);
@@ -250,5 +265,7 @@
         private Label idLabel;
         private DataGridView ogunDataGridView;
         private Label nameLabel;
+        private Label nameLabel2;
+        private Button bilgiDuzenleButton;
     }
 }

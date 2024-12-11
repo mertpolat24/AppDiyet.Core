@@ -25,8 +25,9 @@ namespace AppDiyet.Repo.Configs
             builder.Property(x => x.MealsCount).IsRequired().HasColumnType("int");
             builder.Property(x => x.ImagePath).IsRequired().HasColumnType("nvarchar(350)");
             builder.HasIndex(x => x.Email).IsUnique();
-            builder.HasIndex(x => x.Password).IsUnique();
+            builder.HasIndex(x => x.Password).IsUnique(); 
             builder.HasMany(x => x.Meals).WithOne(x => x.Users).HasForeignKey(x => x.UserId).OnDelete(DeleteBehavior.NoAction);
+
         }
     }
 }

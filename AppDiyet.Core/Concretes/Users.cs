@@ -79,7 +79,7 @@ namespace AppDiyet.Core.Concretes
             }
             set
             {
-                if (value >= 100 && value <= 250)
+                if (value >= 100.00 && value <= 250.00)
                     _lenght = value;
                 else
                     throw new Exception("Boyunuz 100 cm ile 250cm arasında olmalıdır!");
