@@ -37,7 +37,6 @@ namespace AppDiyet.UI
             comboBox1.DataSource = foodsList;
             
             
-            var portions = foodService.CalculatePortionsProteins(userId,porsiyonNumericUpDown.Value,foodsList.ToString());
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
