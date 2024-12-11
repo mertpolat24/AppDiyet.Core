@@ -28,7 +28,7 @@ namespace AppDiyet.Repo.Concretes
             {
                 if (entity is not null)
                 {
-                    _dbSet.Entry(entity).State = EntityState.Added;
+                    _dbSet.Add(entity);
                     return _dbContext.SaveChanges() > 0;
                 }
                 else
@@ -47,7 +47,7 @@ namespace AppDiyet.Repo.Concretes
             {
                 if (entity is not null)
                 {
-                    _dbSet.Entry(entity).State = EntityState.Deleted;
+                    _dbSet.Remove(entity);
                     return _dbContext.SaveChanges() > 0;
                 }
                 else
@@ -75,7 +75,7 @@ namespace AppDiyet.Repo.Concretes
             {
                 if (entity is not null)
                 {
-                    _dbSet.Entry(entity).State = EntityState.Modified;
+                    _dbSet.Update(entity);
                     return _dbContext.SaveChanges() > 0;
                 }
                 else

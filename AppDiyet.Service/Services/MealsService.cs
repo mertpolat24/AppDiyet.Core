@@ -46,10 +46,8 @@ namespace AppDiyet.Service.Services
 
         public List<Meals> GetByMeals(DateTime dateTime1, DateTime dateTime2)
         {
-            if (dateTime1 > dateTime2)
-                throw new ArgumentException("Lütfen Tarih Seçimini Kontrol Ediniz");
-            else
-                return _repo.GetAll().Where(m => m.CreateDate >= dateTime1 && m.CreateDate <= dateTime2).ToList();
+               var asd = _repo.GetAll().Where(m => m.CreateDate.Date >= dateTime1 && m.CreateDate.Date <= dateTime2).ToList();
+            return asd;
         }
         public Meals GetByName(MealCategories meals)
         {
