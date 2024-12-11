@@ -62,6 +62,9 @@ namespace AppDiyet.UI
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            Guncelleme guncelleme = new Guncelleme(userId);
+            guncelleme.Show();
+            this.Hide();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
