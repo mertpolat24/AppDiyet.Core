@@ -73,6 +73,7 @@
             kayitOlButton.TabIndex = 16;
             kayitOlButton.Text = "Kayıt Ol";
             kayitOlButton.UseVisualStyleBackColor = false;
+            kayitOlButton.Click += kayitOlButton_Click_1;
             // 
             // checkBox1
             // 

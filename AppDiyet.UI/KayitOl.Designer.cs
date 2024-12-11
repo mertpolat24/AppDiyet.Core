@@ -346,6 +346,7 @@
             radioButton1.TabStop = true;
             radioButton1.Text = "Kadın";
             radioButton1.UseVisualStyleBackColor = true;
+            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // radioButton2
             // 
@@ -357,6 +358,7 @@
             radioButton2.TabStop = true;
             radioButton2.Text = "Erkek";
             radioButton2.UseVisualStyleBackColor = true;
+            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
             // 
             // KayitOl
             // 

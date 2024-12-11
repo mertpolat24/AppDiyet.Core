@@ -10,7 +10,7 @@ namespace AppDiyet.Core.Concretes
     public class FoodMeals : BaseEntity
     {
         public int FoodId{ get; set; }
-        public int? MealId{ get; set; }
+        public int MealId{ get; set; }
         public Food Food { get; set; }
         public Meals Meals { get; set; }
     }

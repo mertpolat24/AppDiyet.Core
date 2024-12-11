@@ -9,6 +9,7 @@ namespace AppDiyet.Repo.Abstarcts
 {
     public interface IMealsRepo : IBaseRepo<Meals>
     {
-        List<Meals> GetByMeals(DateTime dateTime1, DateTime dateTime2); 
+        List<Meals> GetByMeals(DateTime dateTime1, DateTime dateTime2);
+        List<dynamic> MealFood(int id);
     }
 }

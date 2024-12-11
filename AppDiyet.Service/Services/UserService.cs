@@ -89,7 +89,7 @@ namespace AppDiyet.Service.Services
             return repo.GetById(id);
         }
 
-        public List<Meals> GetByMeals(int id)
+        public List<MealCategories> GetByMeals(int id)
         {
             return repo.GetByMeals(id);
         }

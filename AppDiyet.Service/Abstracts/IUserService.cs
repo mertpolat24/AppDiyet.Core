@@ -24,7 +24,7 @@ namespace AppDiyet.Service.Abstracts
         double CalculateProteins(int id);
         double DailyCaloriesLimit(int id);
         double RemainingCalories(int id);
-        List<Meals> GetByMeals(int id);
+        List<MealCategories> GetByMeals(int id);
         List<Users> GetByName(int id);
     }
 }

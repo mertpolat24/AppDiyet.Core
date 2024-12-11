@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AppDiyet.Core.Concretes;
+using AppDiyet.Core.Enums;
 
 namespace AppDiyet.Repo.Abstarcts
 {
@@ -16,8 +17,8 @@ namespace AppDiyet.Repo.Abstarcts
         double CalculateCalories(int id); 
         double CalculateProteins(int id); 
         double DailyCaloriesLimit(int id); 
-        double RemainingCalories(int id); 
-        List<Meals> GetByMeals(int id); 
+        double RemainingCalories(int id);
+        List<MealCategories> GetByMeals(int id); 
         List<Users> GetByName(int id); 
     }
 }

@@ -32,7 +32,7 @@ namespace AppDiyet.UI
         }
 
         public void HedefComboBoxVerileriniYukle()
-        { 
+        {
             hedefComboBox.DataSource = Enum.GetValues(typeof(Purpose));
         }
         public void AktiviteComboBoxVerileriniYukle()
@@ -69,7 +69,7 @@ namespace AppDiyet.UI
 
         private void hedefComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void ogunSayisiNumericUpDown_ValueChanged(object sender, EventArgs e)
@@ -78,16 +78,6 @@ namespace AppDiyet.UI
         }
 
         private void aktiviteDuzeyiComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void erkekCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kadinCheckBox_CheckedChanged(object sender, EventArgs e)
         {
 
         }
@@ -130,7 +120,15 @@ namespace AppDiyet.UI
                 labelImage.Text = imagePath;
             }
         }
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            Gender cinsiyet = Gender.Female;
+        }
 
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            Gender cinsiyet = Gender.Male;
+        }
         private void kaydetButton_Click(object sender, EventArgs e)
         {
             try
@@ -154,11 +152,11 @@ namespace AppDiyet.UI
                 int hedefKilo = (int)hedefKiloNumericUpDown.Value;
                 Gender cinsiyet = Gender.Male;
                 string resimYolu = labelImage.Text;
-                if (erkekCheckBox.Checked)
+                if (radioButton1.Checked)
                 {
                     cinsiyet = Gender.Male;
                 }
-                else if (kadinCheckBox.Checked)
+                else if (radioButton2.Checked)
                 {
                     cinsiyet = Gender.Female;
                 }
@@ -174,6 +172,8 @@ namespace AppDiyet.UI
                 {
                     MessageBox.Show("kullanıcı başarıyla kaydedildi!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
+                    Form1 form1 = new Form1();
+                    form1.Show();
                 }
                 else
                     throw new Exception("kullanıcı kaydedilemedi. lütfen tekrar deneyin.");
@@ -184,5 +184,7 @@ namespace AppDiyet.UI
                 MessageBox.Show(ex.Message, "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
     }
 }

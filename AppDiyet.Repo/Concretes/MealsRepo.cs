@@ -19,7 +19,12 @@ namespace AppDiyet.Repo.Concretes
 
         public List<Meals> GetByMeals(DateTime dateTime1, DateTime dateTime2)
         {
-            return _context.Meals.Where(m => m.CreateDate>=dateTime1 && m.CreateDate<= dateTime2).ToList(); // create date'i iki tarih arasında olan öğünleri liste şeklinde geri döndürecektir.
+            return _context.Meals.Where(m => m.CreateDate>=dateTime1 && m.CreateDate<= dateTime2).ToList(); 
+        }
+
+        public List<dynamic> MealFood(int id)
+        {
+            return _context.Meals.Join(_context.FoodMeals, m => m.Id, fm => fm.MealId, (m, fm) => new { m.MealName, m.UserId,m.CreateDate ,fm.FoodId }).Join(_context.Foods, f => f.FoodId, x => x.Id, (f, x) => new { f.UserId, f.MealName,f.CreateDate, x.Name }).Where(x => x.UserId == id).Select(x => (dynamic)new {x.Name,x.CreateDate, x.MealName }).ToList();
         }
     }
 }
