@@ -16,5 +16,10 @@ namespace AppDiyet.UI
         {
             InitializeComponent();
         }
+
+        private void aktiviteDuzeyiComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

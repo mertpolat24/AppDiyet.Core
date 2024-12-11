@@ -83,6 +83,16 @@ namespace AppDiyet.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap e902deac_099a_4057_8cb7_6da54730ae76 {
+            get {
+                object obj = ResourceManager.GetObject("e902deac-099a-4057-8cb7-6da54730ae76", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap eksikpizza {
             get {
                 object obj = ResourceManager.GetObject("eksikpizza", resourceCulture);
