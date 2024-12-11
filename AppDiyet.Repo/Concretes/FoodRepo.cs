@@ -1,4 +1,5 @@
 ﻿using AppDiyet.Core.Concretes;
+using AppDiyet.Core.Enums;
 using AppDiyet.Repo.Abstarcts;
 using AppDiyet.Repo.Context;
 using System;
@@ -18,7 +19,7 @@ namespace AppDiyet.Repo.Concretes
             _context = dbContext;
         }
 
-        public double CalculatePortionsCalories(int id, Food amount, Food portionType)
+        public double CalculatePortionsCalories(int id, Food amount, PortionType portionType)
         {
             var food = _context.Foods.FirstOrDefault(f => f.Id == id);
 
@@ -37,7 +38,7 @@ namespace AppDiyet.Repo.Concretes
             }
         }
 
-        public double CalculatePortionsProteins(int id, Food amount, Food portionType)
+        public double CalculatePortionsProteins(int id, Food amount, PortionType portionType)
         {
             var food = _context.Foods.FirstOrDefault(f => f.Id == id);
 

@@ -77,15 +77,15 @@ namespace AppDiyet.Service.Services
                 return false;
         }
 
-        public double CalculatePortionsCalories(int id, Food amount, Food portionType)
+        public double CalculatePortionsCalories(int id, Food amount, PortionType portionType)
         {
             return _foodRepo.CalculatePortionsCalories(id, amount, portionType);
         }
 
-        public double CalculatePortionsProteins(int id, Food amount, Food portionType)
+        public double CalculatePortionsProteins(int id, Food amount, PortionType portionType)
         {
             return _foodRepo.CalculatePortionsProteins(id, amount, portionType);
         }
-    }
 
+    }
 }

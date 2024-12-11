@@ -34,7 +34,6 @@
             button7 = new Button();
             pictureBox1 = new PictureBox();
             comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
             label1 = new Label();
             label2 = new Label();
             button1 = new Button();
@@ -47,7 +46,9 @@
             label5 = new Label();
             label6 = new Label();
             dateTimePicker1 = new DateTimePicker();
+            porsiyonNumericUpDown = new NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)porsiyonNumericUpDown).BeginInit();
             SuspendLayout();
             // 
             // listBox1
@@ -87,6 +88,7 @@
             button7.TabIndex = 2;
             button7.Text = "Yeni Yemek";
             button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
             // 
             // pictureBox1
             // 
@@ -103,14 +105,7 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(192, 28);
             comboBox1.TabIndex = 4;
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(730, 177);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(192, 28);
-            comboBox2.TabIndex = 5;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label1
             // 
@@ -210,10 +205,19 @@
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(35, 44);
+            dateTimePicker1.Location = new Point(356, 284);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(255, 27);
             dateTimePicker1.TabIndex = 9;
+            // 
+            // porsiyonNumericUpDown
+            // 
+            porsiyonNumericUpDown.Increment = new decimal(new int[] { 10, 0, 0, 0 });
+            porsiyonNumericUpDown.Location = new Point(730, 177);
+            porsiyonNumericUpDown.Name = "porsiyonNumericUpDown";
+            porsiyonNumericUpDown.Size = new Size(192, 27);
+            porsiyonNumericUpDown.TabIndex = 10;
+            porsiyonNumericUpDown.ValueChanged += porsiyonNumericUpDown_ValueChanged;
             // 
             // OgunCrud
             // 
@@ -221,6 +225,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.InactiveBorder;
             ClientSize = new Size(982, 653);
+            Controls.Add(porsiyonNumericUpDown);
             Controls.Add(dateTimePicker1);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -232,7 +237,6 @@
             Controls.Add(textBox1);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(comboBox2);
             Controls.Add(comboBox1);
             Controls.Add(pictureBox1);
             Controls.Add(button7);
@@ -243,6 +247,7 @@
             Name = "OgunCrud";
             Text = "OgunCrud";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)porsiyonNumericUpDown).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -255,7 +260,6 @@
         private Button button7;
         private PictureBox pictureBox1;
         private ComboBox comboBox1;
-        private ComboBox comboBox2;
         private Label label1;
         private Label label2;
         private Button button1;
@@ -268,5 +272,6 @@
         private Label label5;
         private Label label6;
         private DateTimePicker dateTimePicker1;
+        private NumericUpDown porsiyonNumericUpDown;
     }
 }
