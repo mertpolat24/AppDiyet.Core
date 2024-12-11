@@ -35,24 +35,25 @@
             label7 = new Label();
             label5 = new Label();
             label4 = new Label();
-            kaydetButton = new Button();
+            guncelleButton = new Button();
             aktiviteDuzeyiComboBox = new ComboBox();
-            yasTextBox = new TextBox();
+            sifreTekrarTextBox = new TextBox();
             hedefComboBox = new ComboBox();
-            pictureBox1 = new PictureBox();
-            button1 = new Button();
+            kullaniciPictureBox = new PictureBox();
+            imageSelectButton = new Button();
             label1 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
+            sifreTextBox = new TextBox();
             label3 = new Label();
-            button2 = new Button();
+            degistirButton = new Button();
             label9 = new Label();
             kiloNumericUpDown = new NumericUpDown();
             hedefKiloNumericUpDown = new NumericUpDown();
             ogunSayisiNumericUpDown = new NumericUpDown();
             boyNumericUpDown = new NumericUpDown();
             yasNumericUpDown = new NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            labelImage = new Label();
+            ((System.ComponentModel.ISupportInitialize)kullaniciPictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)kiloNumericUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)hedefKiloNumericUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ogunSayisiNumericUpDown).BeginInit();
@@ -130,16 +131,17 @@
             label4.TabIndex = 60;
             label4.Text = "Hedef";
             // 
-            // kaydetButton
+            // guncelleButton
             // 
-            kaydetButton.BackColor = Color.DarkTurquoise;
-            kaydetButton.Location = new Point(146, 256);
-            kaydetButton.Margin = new Padding(3, 2, 3, 2);
-            kaydetButton.Name = "kaydetButton";
-            kaydetButton.Size = new Size(82, 22);
-            kaydetButton.TabIndex = 50;
-            kaydetButton.Text = "Güncelle";
-            kaydetButton.UseVisualStyleBackColor = false;
+            guncelleButton.BackColor = Color.DarkTurquoise;
+            guncelleButton.Location = new Point(146, 256);
+            guncelleButton.Margin = new Padding(3, 2, 3, 2);
+            guncelleButton.Name = "guncelleButton";
+            guncelleButton.Size = new Size(82, 22);
+            guncelleButton.TabIndex = 50;
+            guncelleButton.Text = "Güncelle";
+            guncelleButton.UseVisualStyleBackColor = false;
+            guncelleButton.Click += guncelleButton_Click;
             // 
             // aktiviteDuzeyiComboBox
             // 
@@ -150,15 +152,14 @@
             aktiviteDuzeyiComboBox.Name = "aktiviteDuzeyiComboBox";
             aktiviteDuzeyiComboBox.Size = new Size(496, 23);
             aktiviteDuzeyiComboBox.TabIndex = 48;
-            aktiviteDuzeyiComboBox.SelectedIndexChanged += aktiviteDuzeyiComboBox_SelectedIndexChanged;
             // 
-            // yasTextBox
+            // sifreTekrarTextBox
             // 
-            yasTextBox.Location = new Point(175, 362);
-            yasTextBox.Margin = new Padding(3, 2, 3, 2);
-            yasTextBox.Name = "yasTextBox";
-            yasTextBox.Size = new Size(164, 23);
-            yasTextBox.TabIndex = 47;
+            sifreTekrarTextBox.Location = new Point(175, 362);
+            sifreTekrarTextBox.Margin = new Padding(3, 2, 3, 2);
+            sifreTekrarTextBox.Name = "sifreTekrarTextBox";
+            sifreTekrarTextBox.Size = new Size(164, 23);
+            sifreTekrarTextBox.TabIndex = 47;
             // 
             // hedefComboBox
             // 
@@ -169,27 +170,28 @@
             hedefComboBox.Size = new Size(496, 23);
             hedefComboBox.TabIndex = 44;
             // 
-            // pictureBox1
+            // kullaniciPictureBox
             // 
-            pictureBox1.Image = Properties.Resources.Recep_Ivedik_7_3_e1670719324142;
-            pictureBox1.Location = new Point(704, 68);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(135, 130);
-            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox1.TabIndex = 66;
-            pictureBox1.TabStop = false;
+            kullaniciPictureBox.Image = Properties.Resources.Recep_Ivedik_7_3_e1670719324142;
+            kullaniciPictureBox.Location = new Point(704, 68);
+            kullaniciPictureBox.Margin = new Padding(3, 2, 3, 2);
+            kullaniciPictureBox.Name = "kullaniciPictureBox";
+            kullaniciPictureBox.Size = new Size(135, 130);
+            kullaniciPictureBox.SizeMode = PictureBoxSizeMode.CenterImage;
+            kullaniciPictureBox.TabIndex = 66;
+            kullaniciPictureBox.TabStop = false;
             // 
-            // button1
+            // imageSelectButton
             // 
-            button1.BackColor = Color.DarkTurquoise;
-            button1.Location = new Point(756, 210);
-            button1.Margin = new Padding(3, 2, 3, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(82, 22);
-            button1.TabIndex = 67;
-            button1.Text = "Değiştir";
-            button1.UseVisualStyleBackColor = false;
+            imageSelectButton.BackColor = Color.DarkTurquoise;
+            imageSelectButton.Location = new Point(756, 210);
+            imageSelectButton.Margin = new Padding(3, 2, 3, 2);
+            imageSelectButton.Name = "imageSelectButton";
+            imageSelectButton.Size = new Size(82, 22);
+            imageSelectButton.TabIndex = 67;
+            imageSelectButton.Text = "Değiştir";
+            imageSelectButton.UseVisualStyleBackColor = false;
+            imageSelectButton.Click += imageSelectButton_Click;
             // 
             // label1
             // 
@@ -211,13 +213,13 @@
             label2.TabIndex = 68;
             label2.Text = "Yeni Şifre Tekrar";
             // 
-            // textBox1
+            // sifreTextBox
             // 
-            textBox1.Location = new Point(175, 336);
-            textBox1.Margin = new Padding(3, 2, 3, 2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(164, 23);
-            textBox1.TabIndex = 47;
+            sifreTextBox.Location = new Point(175, 336);
+            sifreTextBox.Margin = new Padding(3, 2, 3, 2);
+            sifreTextBox.Name = "sifreTextBox";
+            sifreTextBox.Size = new Size(164, 23);
+            sifreTextBox.TabIndex = 47;
             // 
             // label3
             // 
@@ -229,17 +231,18 @@
             label3.TabIndex = 69;
             label3.Text = "Şifre Değişikliği \r\n";
             // 
-            // button2
+            // degistirButton
             // 
-            button2.BackColor = Color.DarkTurquoise;
-            button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            button2.Location = new Point(256, 386);
-            button2.Margin = new Padding(3, 2, 3, 2);
-            button2.Name = "button2";
-            button2.Size = new Size(82, 24);
-            button2.TabIndex = 70;
-            button2.Text = "Değiştir";
-            button2.UseVisualStyleBackColor = false;
+            degistirButton.BackColor = Color.DarkTurquoise;
+            degistirButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            degistirButton.Location = new Point(256, 386);
+            degistirButton.Margin = new Padding(3, 2, 3, 2);
+            degistirButton.Name = "degistirButton";
+            degistirButton.Size = new Size(82, 24);
+            degistirButton.TabIndex = 70;
+            degistirButton.Text = "Değiştir";
+            degistirButton.UseVisualStyleBackColor = false;
+            degistirButton.Click += degistirButton_Click;
             // 
             // label9
             // 
@@ -257,6 +260,7 @@
             kiloNumericUpDown.Name = "kiloNumericUpDown";
             kiloNumericUpDown.Size = new Size(120, 23);
             kiloNumericUpDown.TabIndex = 72;
+            kiloNumericUpDown.ValueChanged += kiloNumericUpDown_ValueChanged;
             // 
             // hedefKiloNumericUpDown
             // 
@@ -286,24 +290,33 @@
             yasNumericUpDown.Size = new Size(120, 23);
             yasNumericUpDown.TabIndex = 72;
             // 
+            // labelImage
+            // 
+            labelImage.AutoSize = true;
+            labelImage.Location = new Point(96, 447);
+            labelImage.Name = "labelImage";
+            labelImage.Size = new Size(0, 15);
+            labelImage.TabIndex = 73;
+            // 
             // Guncelleme
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Azure;
             ClientSize = new Size(859, 490);
+            Controls.Add(labelImage);
             Controls.Add(yasNumericUpDown);
             Controls.Add(boyNumericUpDown);
             Controls.Add(ogunSayisiNumericUpDown);
             Controls.Add(hedefKiloNumericUpDown);
             Controls.Add(kiloNumericUpDown);
             Controls.Add(label9);
-            Controls.Add(button2);
+            Controls.Add(degistirButton);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(button1);
-            Controls.Add(pictureBox1);
+            Controls.Add(imageSelectButton);
+            Controls.Add(kullaniciPictureBox);
             Controls.Add(label11);
             Controls.Add(label10);
             Controls.Add(label6);
@@ -311,15 +324,15 @@
             Controls.Add(label7);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(kaydetButton);
+            Controls.Add(guncelleButton);
             Controls.Add(aktiviteDuzeyiComboBox);
-            Controls.Add(textBox1);
-            Controls.Add(yasTextBox);
+            Controls.Add(sifreTextBox);
+            Controls.Add(sifreTekrarTextBox);
             Controls.Add(hedefComboBox);
             Margin = new Padding(3, 2, 3, 2);
             Name = "Guncelleme";
             Text = "Guncelleme";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)kullaniciPictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)kiloNumericUpDown).EndInit();
             ((System.ComponentModel.ISupportInitialize)hedefKiloNumericUpDown).EndInit();
             ((System.ComponentModel.ISupportInitialize)ogunSayisiNumericUpDown).EndInit();
@@ -337,22 +350,23 @@
         private Label label7;
         private Label label5;
         private Label label4;
-        private Button kaydetButton;
+        private Button guncelleButton;
         private ComboBox aktiviteDuzeyiComboBox;
-        private TextBox yasTextBox;
+        private TextBox sifreTekrarTextBox;
         private ComboBox hedefComboBox;
-        private PictureBox pictureBox1;
-        private Button button1;
+        private PictureBox kullaniciPictureBox;
+        private Button imageSelectButton;
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox sifreTextBox;
         private Label label3;
-        private Button button2;
+        private Button degistirButton;
         private Label label9;
         private NumericUpDown kiloNumericUpDown;
         private NumericUpDown hedefKiloNumericUpDown;
         private NumericUpDown ogunSayisiNumericUpDown;
         private NumericUpDown boyNumericUpDown;
         private NumericUpDown yasNumericUpDown;
+        private Label labelImage;
     }
 }
