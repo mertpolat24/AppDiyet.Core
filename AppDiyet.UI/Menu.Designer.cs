@@ -33,8 +33,8 @@
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            button1 = new Button();
-            button3 = new Button();
+            gesmisOgunler = new Button();
+            ogunEkleButton = new Button();
             pictureBox1 = new PictureBox();
             dataGridView1 = new DataGridView();
             textBox1 = new TextBox();
@@ -85,7 +85,6 @@
             label4.Size = new Size(125, 28);
             label4.TabIndex = 0;
             label4.Text = "Kalan Kalori";
-            label4.Click += label4_Click;
             // 
             // label5
             // 
@@ -96,36 +95,37 @@
             label5.Size = new Size(136, 28);
             label5.TabIndex = 0;
             label5.Text = "Kalan Protein";
-            label5.Click += label4_Click;
             // 
-            // button1
+            // gesmisOgunler
             // 
-            button1.Location = new Point(46, 302);
-            button1.Name = "button1";
-            button1.Size = new Size(186, 29);
-            button1.TabIndex = 1;
-            button1.Text = "Geçmiş Öğünler";
-            button1.UseVisualStyleBackColor = true;
+            gesmisOgunler.Location = new Point(46, 302);
+            gesmisOgunler.Name = "gesmisOgunler";
+            gesmisOgunler.Size = new Size(186, 29);
+            gesmisOgunler.TabIndex = 1;
+            gesmisOgunler.Text = "Geçmiş Öğünler";
+            gesmisOgunler.UseVisualStyleBackColor = true;
+            gesmisOgunler.Click += gesmisOgunler_Click;
             // 
-            // button3
+            // ogunEkleButton
             // 
-            button3.Location = new Point(302, 302);
-            button3.Name = "button3";
-            button3.Size = new Size(186, 29);
-            button3.TabIndex = 1;
-            button3.Text = "Öğün Ekle";
-            button3.UseVisualStyleBackColor = true;
+            ogunEkleButton.Location = new Point(302, 302);
+            ogunEkleButton.Name = "ogunEkleButton";
+            ogunEkleButton.Size = new Size(186, 29);
+            ogunEkleButton.TabIndex = 1;
+            ogunEkleButton.Text = "Öğün Ekle";
+            ogunEkleButton.UseVisualStyleBackColor = true;
+            ogunEkleButton.Click += ogunEkleButton_Click;
             // 
             // pictureBox1
             // 
             pictureBox1.Cursor = Cursors.Hand;
-            pictureBox1.Image = Properties.Resources.Recep_Ivedik_7_3_e16707193241421;
             pictureBox1.Location = new Point(808, 24);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(136, 134);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // dataGridView1
             // 
@@ -138,6 +138,7 @@
             // 
             // textBox1
             // 
+            textBox1.Enabled = false;
             textBox1.Location = new Point(235, 53);
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
@@ -146,6 +147,7 @@
             // 
             // textBox2
             // 
+            textBox2.Enabled = false;
             textBox2.Location = new Point(235, 86);
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
@@ -154,6 +156,7 @@
             // 
             // textBox3
             // 
+            textBox3.Enabled = false;
             textBox3.Location = new Point(235, 130);
             textBox3.Name = "textBox3";
             textBox3.ReadOnly = true;
@@ -162,6 +165,7 @@
             // 
             // textBox4
             // 
+            textBox4.Enabled = false;
             textBox4.Location = new Point(235, 163);
             textBox4.Name = "textBox4";
             textBox4.ReadOnly = true;
@@ -170,6 +174,7 @@
             // 
             // textBox5
             // 
+            textBox5.Enabled = false;
             textBox5.Location = new Point(235, 209);
             textBox5.Name = "textBox5";
             textBox5.ReadOnly = true;
@@ -188,8 +193,8 @@
             Controls.Add(textBox1);
             Controls.Add(dataGridView1);
             Controls.Add(pictureBox1);
-            Controls.Add(button3);
-            Controls.Add(button1);
+            Controls.Add(ogunEkleButton);
+            Controls.Add(gesmisOgunler);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -210,8 +215,8 @@
         private Label label3;
         private Label label4;
         private Label label5;
-        private Button button1;
-        private Button button3;
+        private Button gesmisOgunler;
+        private Button ogunEkleButton;
         private PictureBox pictureBox1;
         private DataGridView dataGridView1;
         private TextBox textBox1;

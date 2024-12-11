@@ -45,7 +45,8 @@ namespace AppDiyet.Core.Concretes
                 {
                     _password = value;
                 }
-                throw new Exception("Şifre en az 10 karakterli, 1 büyük harf, 1 adet rakam ve 1 özel karakter içermelidir!");
+                else
+                    throw new Exception("Şifre en az 10 karakterli, 1 büyük harf, 1 adet rakam ve 1 özel karakter içermelidir!");
             }
         }
         public string FirstName

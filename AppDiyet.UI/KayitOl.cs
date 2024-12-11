@@ -32,7 +32,7 @@ namespace AppDiyet.UI
         }
 
         public void HedefComboBoxVerileriniYukle()
-        {
+        { 
             hedefComboBox.DataSource = Enum.GetValues(typeof(Purpose));
         }
         public void AktiviteComboBoxVerileriniYukle()
@@ -69,7 +69,7 @@ namespace AppDiyet.UI
 
         private void hedefComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void ogunSayisiNumericUpDown_ValueChanged(object sender, EventArgs e)
@@ -116,42 +116,72 @@ namespace AppDiyet.UI
         {
 
         }
+        private void imageSelectButton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            openFileDialog.Filter = "Image Files (*.jpg;*.jpeg;*.png;*.bmp)|*.jpg;*.jpeg;*.png;*.bmp|All Files (*.*)|*.*";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string imagePath = openFileDialog.FileName;
+                MessageBox.Show("Seçilen dosya: " + imagePath, "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                pictureBox.ImageLocation = imagePath;
+                labelImage.Text = imagePath;
+            }
+        }
 
         private void kaydetButton_Click(object sender, EventArgs e)
         {
-            var cinsiyet = Gender.Male;
-            if (string.IsNullOrWhiteSpace(adTextBox.Text) || string.IsNullOrWhiteSpace(soyadTextBox.Text) ||
-                string.IsNullOrWhiteSpace(mailAdresiTextBox.Text) || string.IsNullOrWhiteSpace(sifreTextBox.Text))
-                MessageBox.Show("Lütfen tüm alanları doldurun!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            var mevcutKullanici = userService.GetByEmail(mailAdresiTextBox.Text);
-            if (mevcutKullanici != null)
+            try
             {
-                MessageBox.Show("Bu e-posta zaten kayıtlı!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            if (sifreTextBox.Text.Length < 10 || !sifreTextBox.Text.Any(char.IsUpper) ||
-        !sifreTextBox.Text.Any(ch => !char.IsLetterOrDigit(ch)) || !sifreTextBox.Text.Any(char.IsDigit))
-                MessageBox.Show("Şifre en az 10 karakter uzunluğunda, bir büyük harf, bir rakam ve bir özel karakter içermelidir.",
-            "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (string.IsNullOrWhiteSpace(adTextBox.Text) || string.IsNullOrWhiteSpace(soyadTextBox.Text) ||
+                    string.IsNullOrWhiteSpace(mailAdresiTextBox.Text) || string.IsNullOrWhiteSpace(sifreTextBox.Text))
+                    throw new Exception("Lütfen tüm alanları doldurun!");
 
-            if (erkekCheckBox.Checked)
-            {
-                cinsiyet = Gender.Male;
-            }
-            else
-            {
-                cinsiyet = Gender.Female;
-            }
-            string asdasd = string.Empty;
-            bool sonuc = userService.Create(adTextBox.Text, soyadTextBox.Text, mailAdresiTextBox.Text, sifreTextBox.Text, (int)yasNumericUpDown.Value, (double)boyNumericUpDown.Value, (double)kiloNumericUpDown.Value, cinsiyet, (Purpose)hedefComboBox.SelectedItem, (Activities)aktiviteDuzeyiComboBox.SelectedItem, (int)ogunSayisiNumericUpDown.Value, (double)hedefKiloNumericUpDown.Value,asdasd);
 
-            if (sonuc)
-            {
-                MessageBox.Show("kullanıcı başarıyla kaydedildi!", "bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+
+                string ad = adTextBox.Text;
+                string soyad = soyadTextBox.Text;
+                string mail = mailAdresiTextBox.Text;
+                string sifre = sifreTextBox.Text;
+                int yas = (int)yasNumericUpDown.Value;
+                double boy = (double)boyNumericUpDown.Value;
+                double kilo = (double)kiloNumericUpDown.Value;
+                Purpose purpose = (Purpose)hedefComboBox.SelectedIndex;
+                Activities activities = (Activities)aktiviteDuzeyiComboBox.SelectedIndex;
+                int ogunSayisi = (int)ogunSayisiNumericUpDown.Value;
+                int hedefKilo = (int)hedefKiloNumericUpDown.Value;
+                Gender cinsiyet = Gender.Male;
+                string resimYolu = labelImage.Text;
+                if (erkekCheckBox.Checked)
+                {
+                    cinsiyet = Gender.Male;
+                }
+                else if (kadinCheckBox.Checked)
+                {
+                    cinsiyet = Gender.Female;
+                }
+                else
+                    throw new Exception("Lütfen Cinsiyet Seçimi Yapınız!");
+
+                if (yas > 65 || yas < 18)
+                    throw new Exception("Bu Uygulamayı 18 Yaşından Küçükler ve 65 Yaşından Büyükler Kullanamaz");
+
+                bool sonuc = userService.Create(ad, soyad, mail, sifre, yas, boy, kilo, cinsiyet, purpose, activities, ogunSayisi, hedefKilo, resimYolu);
+
+                if (sonuc)
+                {
+                    MessageBox.Show("kullanıcı başarıyla kaydedildi!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                    throw new Exception("kullanıcı kaydedilemedi. lütfen tekrar deneyin.");
+
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("kullanıcı kaydedilemedi. lütfen tekrar deneyin.", "hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

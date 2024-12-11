@@ -49,6 +49,7 @@
             comboBox1 = new ComboBox();
             label8 = new Label();
             label9 = new Label();
+            button4 = new Button();
             listBox1 = new ListBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -102,7 +103,6 @@
             label5.Size = new Size(69, 23);
             label5.TabIndex = 0;
             label5.Text = "Yemek :";
-            label5.Click += label5_Click;
             // 
             // label6
             // 
@@ -241,13 +241,24 @@
             label9.TabIndex = 8;
             label9.Text = "Bitiş Tarihi ";
             // 
+            // button4
+            // 
+            button4.Location = new Point(408, 145);
+            button4.Name = "button4";
+            button4.Size = new Size(94, 29);
+            button4.TabIndex = 10;
+            button4.Text = "button4";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // listBox1
             // 
             listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(508, 94);
+            listBox1.Location = new Point(560, 49);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(414, 504);
-            listBox1.TabIndex = 9;
+            listBox1.Size = new Size(369, 584);
+            listBox1.TabIndex = 11;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged_1;
             // 
             // OgunListeleme
             // 
@@ -256,6 +267,7 @@
             BackColor = Color.BlanchedAlmond;
             ClientSize = new Size(982, 653);
             Controls.Add(listBox1);
+            Controls.Add(button4);
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(comboBox1);
@@ -307,6 +319,7 @@
         private ComboBox comboBox1;
         private Label label8;
         private Label label9;
+        private Button button4;
         private ListBox listBox1;
     }
 }

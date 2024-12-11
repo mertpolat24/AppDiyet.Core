@@ -16,10 +16,23 @@ namespace AppDiyet.UI
         {
             InitializeComponent();
         }
-
-        private void label4_Click(object sender, EventArgs e)
+        OgunListeleme OgunListeleme = new OgunListeleme();
+        private void gesmisOgunler_Click(object sender, EventArgs e)
         {
+            OgunListeleme ogunListeleme = new OgunListeleme();
+            ogunListeleme.Show();
+            this.Hide();
+        }
 
+        private void ogunEkleButton_Click(object sender, EventArgs e)
+        {
+            OgunCrud ogunCrud = new OgunCrud();
+            ogunCrud.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
         }
     }
 }
