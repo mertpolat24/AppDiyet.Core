@@ -127,7 +127,7 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic);
-            button1.Location = new Point(94, 603);
+            button1.Location = new Point(133, 603);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 1;
@@ -137,7 +137,7 @@
             // button2
             // 
             button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic);
-            button2.Location = new Point(220, 603);
+            button2.Location = new Point(235, 603);
             button2.Name = "button2";
             button2.Size = new Size(94, 29);
             button2.TabIndex = 1;
@@ -191,14 +191,14 @@
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(179, 134);
+            dateTimePicker1.Location = new Point(133, 147);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(250, 27);
             dateTimePicker1.TabIndex = 4;
             // 
             // dateTimePicker2
             // 
-            dateTimePicker2.Location = new Point(179, 96);
+            dateTimePicker2.Location = new Point(133, 94);
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(250, 27);
             dateTimePicker2.TabIndex = 5;
@@ -225,35 +225,35 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            label8.Location = new Point(16, 101);
+            label8.Location = new Point(133, 71);
             label8.Name = "label8";
-            label8.Size = new Size(123, 20);
+            label8.Size = new Size(119, 20);
             label8.TabIndex = 8;
-            label8.Text = "Başlangıç Tarihi :";
+            label8.Text = "Başlangıç Tarihi ";
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            label9.Location = new Point(37, 134);
+            label9.Location = new Point(133, 124);
             label9.Name = "label9";
-            label9.Size = new Size(87, 20);
+            label9.Size = new Size(83, 20);
             label9.TabIndex = 8;
-            label9.Text = "Bitiş Tarihi :";
+            label9.Text = "Bitiş Tarihi ";
             // 
             // listBox1
             // 
             listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(520, 101);
+            listBox1.Location = new Point(508, 94);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(414, 484);
+            listBox1.Size = new Size(414, 504);
             listBox1.TabIndex = 9;
             // 
             // OgunListeleme
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Info;
+            BackColor = Color.BlanchedAlmond;
             ClientSize = new Size(982, 653);
             Controls.Add(listBox1);
             Controls.Add(label9);
