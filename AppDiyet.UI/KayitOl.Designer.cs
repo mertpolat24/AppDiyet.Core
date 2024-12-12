@@ -72,9 +72,10 @@
             // kaydetButton
             // 
             kaydetButton.BackColor = Color.LightGreen;
-            kaydetButton.Location = new Point(386, 509);
+            kaydetButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            kaydetButton.Location = new Point(724, 554);
             kaydetButton.Name = "kaydetButton";
-            kaydetButton.Size = new Size(94, 43);
+            kaydetButton.Size = new Size(94, 28);
             kaydetButton.TabIndex = 26;
             kaydetButton.Text = "Kayıt Ol";
             kaydetButton.UseVisualStyleBackColor = false;
@@ -83,7 +84,7 @@
             // aktiviteDuzeyiComboBox
             // 
             aktiviteDuzeyiComboBox.FormattingEnabled = true;
-            aktiviteDuzeyiComboBox.Location = new Point(151, 320);
+            aktiviteDuzeyiComboBox.Location = new Point(252, 152);
             aktiviteDuzeyiComboBox.Name = "aktiviteDuzeyiComboBox";
             aktiviteDuzeyiComboBox.Size = new Size(566, 28);
             aktiviteDuzeyiComboBox.TabIndex = 24;
@@ -91,21 +92,21 @@
             // hedefComboBox
             // 
             hedefComboBox.FormattingEnabled = true;
-            hedefComboBox.Location = new Point(151, 228);
+            hedefComboBox.Location = new Point(252, 118);
             hedefComboBox.Name = "hedefComboBox";
             hedefComboBox.Size = new Size(566, 28);
             hedefComboBox.TabIndex = 20;
             // 
             // adTextBox
             // 
-            adTextBox.Location = new Point(151, 45);
+            adTextBox.Location = new Point(252, 52);
             adTextBox.Name = "adTextBox";
             adTextBox.Size = new Size(566, 27);
             adTextBox.TabIndex = 29;
             // 
             // soyadTextBox
             // 
-            soyadTextBox.Location = new Point(151, 74);
+            soyadTextBox.Location = new Point(252, 85);
             soyadTextBox.Name = "soyadTextBox";
             soyadTextBox.Size = new Size(566, 27);
             soyadTextBox.TabIndex = 29;
@@ -113,80 +114,80 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label1.Location = new Point(23, 52);
+            label1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label1.Location = new Point(193, 54);
             label1.Name = "label1";
-            label1.Size = new Size(29, 20);
+            label1.Size = new Size(37, 25);
             label1.TabIndex = 37;
             label1.Text = "Ad";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label2.Location = new Point(23, 81);
+            label2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label2.Location = new Point(163, 87);
             label2.Name = "label2";
-            label2.Size = new Size(51, 20);
+            label2.Size = new Size(67, 25);
             label2.TabIndex = 37;
             label2.Text = "Soyad";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label3.Location = new Point(23, 109);
+            label3.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label3.Location = new Point(149, 359);
             label3.Name = "label3";
-            label3.Size = new Size(64, 20);
+            label3.Size = new Size(81, 25);
             label3.TabIndex = 37;
             label3.Text = "Cinsiyet";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label4.Location = new Point(23, 236);
+            label4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label4.Location = new Point(164, 121);
             label4.Name = "label4";
-            label4.Size = new Size(51, 20);
+            label4.Size = new Size(66, 25);
             label4.TabIndex = 37;
             label4.Text = "Hedef";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label5.Location = new Point(23, 173);
+            label5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label5.Location = new Point(184, 224);
             label5.Name = "label5";
-            label5.Size = new Size(36, 20);
+            label5.Size = new Size(46, 25);
             label5.TabIndex = 37;
             label5.Text = "Kilo";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label6.Location = new Point(23, 203);
+            label6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label6.Location = new Point(184, 259);
             label6.Name = "label6";
-            label6.Size = new Size(36, 20);
+            label6.Size = new Size(46, 25);
             label6.TabIndex = 37;
             label6.Text = "Boy";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label7.Location = new Point(23, 140);
+            label7.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label7.Location = new Point(190, 189);
             label7.Name = "label7";
-            label7.Size = new Size(32, 20);
+            label7.Size = new Size(40, 25);
             label7.TabIndex = 37;
             label7.Text = "Yaş";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label8.Location = new Point(23, 297);
+            label8.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label8.Location = new Point(114, 329);
             label8.Name = "label8";
-            label8.Size = new Size(90, 20);
+            label8.Size = new Size(116, 25);
             label8.TabIndex = 37;
             label8.Text = "Öğün Sayısı";
             // 
@@ -203,41 +204,43 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label10.Location = new Point(23, 328);
+            label10.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label10.Location = new Point(85, 155);
             label10.Name = "label10";
-            label10.Size = new Size(115, 20);
+            label10.Size = new Size(145, 25);
             label10.TabIndex = 38;
             label10.Text = "Aktivite Duzeyi";
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(391, 371);
+            label11.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label11.Location = new Point(252, 420);
             label11.Name = "label11";
-            label11.Size = new Size(84, 20);
+            label11.Size = new Size(88, 20);
             label11.TabIndex = 39;
             label11.Text = "Mail Adresi";
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(414, 445);
+            label12.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label12.Location = new Point(252, 482);
             label12.Name = "label12";
-            label12.Size = new Size(39, 20);
+            label12.Size = new Size(41, 20);
             label12.TabIndex = 40;
             label12.Text = "Şifre";
             // 
             // mailAdresiTextBox
             // 
-            mailAdresiTextBox.Location = new Point(150, 394);
+            mailAdresiTextBox.Location = new Point(252, 443);
             mailAdresiTextBox.Name = "mailAdresiTextBox";
             mailAdresiTextBox.Size = new Size(566, 27);
             mailAdresiTextBox.TabIndex = 41;
             // 
             // sifreTextBox
             // 
-            sifreTextBox.Location = new Point(150, 467);
+            sifreTextBox.Location = new Point(252, 505);
             sifreTextBox.Name = "sifreTextBox";
             sifreTextBox.Size = new Size(566, 27);
             sifreTextBox.TabIndex = 41;
@@ -250,17 +253,19 @@
             // 
             // pictureBox
             // 
-            pictureBox.Location = new Point(777, 45);
+            pictureBox.BackColor = Color.Wheat;
+            pictureBox.Location = new Point(653, 186);
             pictureBox.Name = "pictureBox";
-            pictureBox.Size = new Size(165, 197);
+            pictureBox.Size = new Size(165, 198);
             pictureBox.TabIndex = 42;
             pictureBox.TabStop = false;
             pictureBox.Click += pictureBox_Click;
             // 
             // imageSelectButton
             // 
-            imageSelectButton.BackColor = SystemColors.GradientActiveCaption;
-            imageSelectButton.Location = new Point(792, 270);
+            imageSelectButton.BackColor = Color.LightGreen;
+            imageSelectButton.Font = new Font("Segoe UI", 8F, FontStyle.Bold);
+            imageSelectButton.Location = new Point(506, 356);
             imageSelectButton.Name = "imageSelectButton";
             imageSelectButton.Size = new Size(124, 29);
             imageSelectButton.TabIndex = 43;
@@ -271,7 +276,7 @@
             // 
             // ogunSayisiNumericUpDown
             // 
-            ogunSayisiNumericUpDown.Location = new Point(151, 290);
+            ogunSayisiNumericUpDown.Location = new Point(252, 327);
             ogunSayisiNumericUpDown.Margin = new Padding(3, 4, 3, 4);
             ogunSayisiNumericUpDown.Name = "ogunSayisiNumericUpDown";
             ogunSayisiNumericUpDown.Size = new Size(137, 27);
@@ -279,7 +284,7 @@
             // 
             // yasNumericUpDown
             // 
-            yasNumericUpDown.Location = new Point(151, 133);
+            yasNumericUpDown.Location = new Point(252, 187);
             yasNumericUpDown.Margin = new Padding(3, 4, 3, 4);
             yasNumericUpDown.Name = "yasNumericUpDown";
             yasNumericUpDown.Size = new Size(137, 27);
@@ -288,7 +293,7 @@
             // 
             // kiloNumericUpDown
             // 
-            kiloNumericUpDown.Location = new Point(151, 166);
+            kiloNumericUpDown.Location = new Point(252, 222);
             kiloNumericUpDown.Margin = new Padding(3, 4, 3, 4);
             kiloNumericUpDown.Name = "kiloNumericUpDown";
             kiloNumericUpDown.Size = new Size(137, 27);
@@ -297,7 +302,7 @@
             // 
             // boyNumericUpDown
             // 
-            boyNumericUpDown.Location = new Point(151, 196);
+            boyNumericUpDown.Location = new Point(252, 257);
             boyNumericUpDown.Margin = new Padding(3, 4, 3, 4);
             boyNumericUpDown.Maximum = new decimal(new int[] { 250, 0, 0, 0 });
             boyNumericUpDown.Name = "boyNumericUpDown";
@@ -308,16 +313,16 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label13.Location = new Point(23, 265);
+            label13.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label13.Location = new Point(125, 294);
             label13.Name = "label13";
-            label13.Size = new Size(82, 20);
+            label13.Size = new Size(105, 25);
             label13.TabIndex = 37;
             label13.Text = "Hedef Kilo";
             // 
             // hedefKiloNumericUpDown
             // 
-            hedefKiloNumericUpDown.Location = new Point(151, 258);
+            hedefKiloNumericUpDown.Location = new Point(252, 292);
             hedefKiloNumericUpDown.Margin = new Padding(3, 4, 3, 4);
             hedefKiloNumericUpDown.Name = "hedefKiloNumericUpDown";
             hedefKiloNumericUpDown.Size = new Size(137, 27);
@@ -339,7 +344,7 @@
             // radioButton1
             // 
             radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(151, 107);
+            radioButton1.Location = new Point(253, 361);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(68, 24);
             radioButton1.TabIndex = 47;
@@ -351,7 +356,7 @@
             // radioButton2
             // 
             radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(225, 107);
+            radioButton2.Location = new Point(327, 361);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(65, 24);
             radioButton2.TabIndex = 48;
@@ -364,7 +369,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.AntiqueWhite;
+            BackColor = SystemColors.Info;
             ClientSize = new Size(982, 653);
             Controls.Add(radioButton2);
             Controls.Add(radioButton1);

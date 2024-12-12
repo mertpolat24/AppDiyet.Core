@@ -35,7 +35,6 @@
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
-            button1 = new Button();
             button2 = new Button();
             button3 = new Button();
             textBox1 = new TextBox();
@@ -58,8 +57,14 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = SystemColors.Info;
             label1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+<<<<<<< HEAD
             label1.Location = new Point(48, 230);
+=======
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(55, 307);
+>>>>>>> 372224ff6590d8098a27091a539ea5fc9e4472aa
             label1.Name = "label1";
             label1.Size = new Size(61, 19);
             label1.TabIndex = 0;
@@ -68,8 +73,14 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = SystemColors.Info;
             label2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+<<<<<<< HEAD
             label2.Location = new Point(65, 257);
+=======
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(74, 343);
+>>>>>>> 372224ff6590d8098a27091a539ea5fc9e4472aa
             label2.Name = "label2";
             label2.Size = new Size(47, 19);
             label2.TabIndex = 0;
@@ -78,8 +89,14 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = SystemColors.Info;
             label3.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+<<<<<<< HEAD
             label3.Location = new Point(48, 202);
+=======
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(55, 270);
+>>>>>>> 372224ff6590d8098a27091a539ea5fc9e4472aa
             label3.Name = "label3";
             label3.Size = new Size(61, 19);
             label3.TabIndex = 0;
@@ -88,8 +105,14 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = SystemColors.Info;
             label4.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+<<<<<<< HEAD
             label4.Location = new Point(14, 178);
+=======
+            label4.ForeColor = Color.Black;
+            label4.Location = new Point(16, 237);
+>>>>>>> 372224ff6590d8098a27091a539ea5fc9e4472aa
             label4.Name = "label4";
             label4.Size = new Size(96, 19);
             label4.TabIndex = 0;
@@ -98,8 +121,14 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = SystemColors.Info;
             label5.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+<<<<<<< HEAD
             label5.Location = new Point(52, 150);
+=======
+            label5.ForeColor = Color.Black;
+            label5.Location = new Point(60, 200);
+>>>>>>> 372224ff6590d8098a27091a539ea5fc9e4472aa
             label5.Name = "label5";
             label5.Size = new Size(56, 19);
             label5.TabIndex = 0;
@@ -108,8 +137,14 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.BackColor = SystemColors.Info;
             label6.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+<<<<<<< HEAD
             label6.Location = new Point(38, 317);
+=======
+            label6.ForeColor = Color.Black;
+            label6.Location = new Point(44, 423);
+>>>>>>> 372224ff6590d8098a27091a539ea5fc9e4472aa
             label6.Name = "label6";
             label6.Size = new Size(69, 19);
             label6.TabIndex = 0;
@@ -118,13 +153,20 @@
             // label7
             // 
             label7.AutoSize = true;
+            label7.BackColor = SystemColors.Info;
             label7.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+<<<<<<< HEAD
             label7.Location = new Point(40, 287);
+=======
+            label7.ForeColor = Color.Black;
+            label7.Location = new Point(46, 383);
+>>>>>>> 372224ff6590d8098a27091a539ea5fc9e4472aa
             label7.Name = "label7";
             label7.Size = new Size(69, 19);
             label7.TabIndex = 0;
             label7.Text = "Kategori :";
             // 
+<<<<<<< HEAD
             // button1
             // 
             button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic);
@@ -136,8 +178,11 @@
             button1.Text = "Ekle";
             button1.UseVisualStyleBackColor = true;
             // 
+=======
+>>>>>>> 372224ff6590d8098a27091a539ea5fc9e4472aa
             // button2
             // 
+            button2.BackColor = Color.LightGreen;
             button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic);
             button2.Location = new Point(206, 452);
             button2.Margin = new Padding(3, 2, 3, 2);
@@ -145,10 +190,11 @@
             button2.Size = new Size(82, 22);
             button2.TabIndex = 1;
             button2.Text = "Güncelle";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
+            button3.BackColor = Color.LightGreen;
             button3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic);
             button3.Location = new Point(293, 452);
             button3.Margin = new Padding(3, 2, 3, 2);
@@ -156,7 +202,7 @@
             button3.Size = new Size(82, 22);
             button3.TabIndex = 1;
             button3.Text = "Sil";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
@@ -200,8 +246,12 @@
             // 
             // bitisTarihiDTP
             // 
+<<<<<<< HEAD
             bitisTarihiDTP.Location = new Point(130, 88);
             bitisTarihiDTP.Margin = new Padding(3, 2, 3, 2);
+=======
+            bitisTarihiDTP.Location = new Point(133, 119);
+>>>>>>> 372224ff6590d8098a27091a539ea5fc9e4472aa
             bitisTarihiDTP.Name = "bitisTarihiDTP";
             bitisTarihiDTP.Size = new Size(219, 23);
             bitisTarihiDTP.TabIndex = 4;
@@ -210,8 +260,12 @@
             // baslangicTarihiDTP
             // 
             baslangicTarihiDTP.CalendarMonthBackground = SystemColors.ActiveBorder;
+<<<<<<< HEAD
             baslangicTarihiDTP.Location = new Point(130, 49);
             baslangicTarihiDTP.Margin = new Padding(3, 2, 3, 2);
+=======
+            baslangicTarihiDTP.Location = new Point(133, 66);
+>>>>>>> 372224ff6590d8098a27091a539ea5fc9e4472aa
             baslangicTarihiDTP.Name = "baslangicTarihiDTP";
             baslangicTarihiDTP.Size = new Size(219, 23);
             baslangicTarihiDTP.TabIndex = 5;
@@ -241,7 +295,11 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+<<<<<<< HEAD
             label8.Location = new Point(139, 32);
+=======
+            label8.Location = new Point(133, 43);
+>>>>>>> 372224ff6590d8098a27091a539ea5fc9e4472aa
             label8.Name = "label8";
             label8.Size = new Size(92, 15);
             label8.TabIndex = 8;
@@ -251,7 +309,11 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+<<<<<<< HEAD
             label9.Location = new Point(139, 71);
+=======
+            label9.Location = new Point(133, 96);
+>>>>>>> 372224ff6590d8098a27091a539ea5fc9e4472aa
             label9.Name = "label9";
             label9.Size = new Size(64, 15);
             label9.TabIndex = 8;
@@ -259,6 +321,7 @@
             // 
             // filtreleButton
             // 
+<<<<<<< HEAD
             filtreleButton.Location = new Point(276, 113);
             filtreleButton.Margin = new Padding(3, 2, 3, 2);
             filtreleButton.Name = "filtreleButton";
@@ -267,12 +330,28 @@
             filtreleButton.Text = "Filtrele";
             filtreleButton.UseVisualStyleBackColor = true;
             filtreleButton.Click += filtreleButton_Click;
+=======
+            button4.BackColor = Color.LightGreen;
+            button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            button4.Location = new Point(133, 161);
+            button4.Name = "button4";
+            button4.Size = new Size(94, 29);
+            button4.TabIndex = 10;
+            button4.Text = "Filtrele";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
+>>>>>>> 372224ff6590d8098a27091a539ea5fc9e4472aa
             // 
             // gecmisOgunlerDataGridView
             // 
+            gecmisOgunlerDataGridView.BackgroundColor = Color.Silver;
             gecmisOgunlerDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+<<<<<<< HEAD
             gecmisOgunlerDataGridView.Location = new Point(464, 32);
             gecmisOgunlerDataGridView.Margin = new Padding(3, 2, 3, 2);
+=======
+            gecmisOgunlerDataGridView.Location = new Point(503, 43);
+>>>>>>> 372224ff6590d8098a27091a539ea5fc9e4472aa
             gecmisOgunlerDataGridView.Name = "gecmisOgunlerDataGridView";
             gecmisOgunlerDataGridView.RowHeadersWidth = 51;
             gecmisOgunlerDataGridView.Size = new Size(364, 424);
@@ -283,8 +362,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+<<<<<<< HEAD
             BackColor = Color.BlanchedAlmond;
             ClientSize = new Size(859, 490);
+=======
+            BackColor = SystemColors.Info;
+            ClientSize = new Size(982, 653);
+>>>>>>> 372224ff6590d8098a27091a539ea5fc9e4472aa
             Controls.Add(gecmisOgunlerDataGridView);
             Controls.Add(filtreleButton);
             Controls.Add(label9);
@@ -300,7 +384,6 @@
             Controls.Add(textBox1);
             Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(label7);
             Controls.Add(label5);
@@ -326,7 +409,6 @@
         private Label label5;
         private Label label6;
         private Label label7;
-        private Button button1;
         private Button button2;
         private Button button3;
         private TextBox textBox1;
