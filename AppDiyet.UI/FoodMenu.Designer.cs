@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox6 = new TextBox();
+            yemekAdıTextBox = new TextBox();
+            kaloriTextBox = new TextBox();
+            proteinTextBox = new TextBox();
+            aciklamaTextBox = new TextBox();
             kategoriComboBox = new ComboBox();
             label1 = new Label();
             label2 = new Label();
@@ -39,52 +39,57 @@
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            pictureBox1 = new PictureBox();
+            ekleButton = new Button();
+            silButton = new Button();
+            guncelleButton = new Button();
+            yemekPictureBox = new PictureBox();
             yemekListBox = new ListBox();
             label7 = new Label();
             label8 = new Label();
             pictureBox2 = new PictureBox();
             miktarComboBox = new ComboBox();
-            miktarTextBox = new TextBox();
             label9 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            label = new Label();
+            miktarNumericUpDown = new NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)yemekPictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)miktarNumericUpDown).BeginInit();
             SuspendLayout();
             // 
-            // textBox2
+            // yemekAdıTextBox
             // 
-            textBox2.Location = new Point(141, 98);
-            textBox2.Margin = new Padding(3, 2, 3, 2);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(180, 23);
-            textBox2.TabIndex = 0;
+            yemekAdıTextBox.Location = new Point(141, 98);
+            yemekAdıTextBox.Margin = new Padding(3, 2, 3, 2);
+            yemekAdıTextBox.Name = "yemekAdıTextBox";
+            yemekAdıTextBox.Size = new Size(180, 23);
+            yemekAdıTextBox.TabIndex = 0;
             // 
-            // textBox3
+            // kaloriTextBox
             // 
-            textBox3.Location = new Point(141, 122);
-            textBox3.Margin = new Padding(3, 2, 3, 2);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(180, 23);
-            textBox3.TabIndex = 0;
+            kaloriTextBox.Location = new Point(141, 122);
+            kaloriTextBox.Margin = new Padding(3, 2, 3, 2);
+            kaloriTextBox.Name = "kaloriTextBox";
+            kaloriTextBox.Size = new Size(180, 23);
+            kaloriTextBox.TabIndex = 0;
+            kaloriTextBox.TextChanged += textBox3_TextChanged;
             // 
-            // textBox4
+            // proteinTextBox
             // 
-            textBox4.Location = new Point(141, 148);
-            textBox4.Margin = new Padding(3, 2, 3, 2);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(180, 23);
-            textBox4.TabIndex = 0;
+            proteinTextBox.Location = new Point(141, 148);
+            proteinTextBox.Margin = new Padding(3, 2, 3, 2);
+            proteinTextBox.Name = "proteinTextBox";
+            proteinTextBox.Size = new Size(180, 23);
+            proteinTextBox.TabIndex = 0;
+            proteinTextBox.TextChanged += textBox4_TextChanged;
             // 
-            // textBox6
+            // aciklamaTextBox
             // 
-            textBox6.Location = new Point(141, 197);
-            textBox6.Margin = new Padding(3, 2, 3, 2);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(180, 23);
-            textBox6.TabIndex = 0;
+            aciklamaTextBox.Location = new Point(141, 197);
+            aciklamaTextBox.Margin = new Padding(3, 2, 3, 2);
+            aciklamaTextBox.Name = "aciklamaTextBox";
+            aciklamaTextBox.Size = new Size(180, 23);
+            aciklamaTextBox.TabIndex = 0;
+            aciklamaTextBox.TextChanged += textBox6_TextChanged;
             // 
             // kategoriComboBox
             // 
@@ -157,50 +162,54 @@
             label6.TabIndex = 2;
             label6.Text = "Miktar";
             // 
-            // button1
+            // ekleButton
             // 
-            button1.BackColor = Color.YellowGreen;
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            button1.Location = new Point(535, 314);
-            button1.Margin = new Padding(3, 2, 3, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(82, 22);
-            button1.TabIndex = 3;
-            button1.Text = "Ekle";
-            button1.UseVisualStyleBackColor = false;
+            ekleButton.BackColor = Color.YellowGreen;
+            ekleButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            ekleButton.Location = new Point(535, 314);
+            ekleButton.Margin = new Padding(3, 2, 3, 2);
+            ekleButton.Name = "ekleButton";
+            ekleButton.Size = new Size(82, 22);
+            ekleButton.TabIndex = 3;
+            ekleButton.Text = "Ekle";
+            ekleButton.UseVisualStyleBackColor = false;
+            ekleButton.Click += ekleButton_Click;
             // 
-            // button2
+            // silButton
             // 
-            button2.BackColor = Color.YellowGreen;
-            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            button2.Location = new Point(635, 314);
-            button2.Margin = new Padding(3, 2, 3, 2);
-            button2.Name = "button2";
-            button2.Size = new Size(82, 22);
-            button2.TabIndex = 3;
-            button2.Text = "Sil";
-            button2.UseVisualStyleBackColor = false;
+            silButton.BackColor = Color.YellowGreen;
+            silButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            silButton.Location = new Point(635, 314);
+            silButton.Margin = new Padding(3, 2, 3, 2);
+            silButton.Name = "silButton";
+            silButton.Size = new Size(82, 22);
+            silButton.TabIndex = 3;
+            silButton.Text = "Sil";
+            silButton.UseVisualStyleBackColor = false;
+            silButton.Click += silButton_Click;
             // 
-            // button3
+            // guncelleButton
             // 
-            button3.BackColor = Color.YellowGreen;
-            button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            button3.Location = new Point(741, 314);
-            button3.Margin = new Padding(3, 2, 3, 2);
-            button3.Name = "button3";
-            button3.Size = new Size(82, 22);
-            button3.TabIndex = 3;
-            button3.Text = "Güncelle";
-            button3.UseVisualStyleBackColor = false;
+            guncelleButton.BackColor = Color.YellowGreen;
+            guncelleButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            guncelleButton.Location = new Point(741, 314);
+            guncelleButton.Margin = new Padding(3, 2, 3, 2);
+            guncelleButton.Name = "guncelleButton";
+            guncelleButton.Size = new Size(82, 22);
+            guncelleButton.TabIndex = 3;
+            guncelleButton.Text = "Güncelle";
+            guncelleButton.UseVisualStyleBackColor = false;
+            guncelleButton.Click += guncelleButton_Click;
             // 
-            // pictureBox1
+            // yemekPictureBox
             // 
-            pictureBox1.Location = new Point(613, 72);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(210, 198);
-            pictureBox1.TabIndex = 4;
-            pictureBox1.TabStop = false;
+            yemekPictureBox.Location = new Point(613, 72);
+            yemekPictureBox.Margin = new Padding(3, 2, 3, 2);
+            yemekPictureBox.Name = "yemekPictureBox";
+            yemekPictureBox.Size = new Size(210, 198);
+            yemekPictureBox.TabIndex = 4;
+            yemekPictureBox.TabStop = false;
+            yemekPictureBox.Click += yemekPictureBox_Click;
             // 
             // yemekListBox
             // 
@@ -251,24 +260,33 @@
             miktarComboBox.Name = "miktarComboBox";
             miktarComboBox.Size = new Size(59, 23);
             miktarComboBox.TabIndex = 1;
-            // 
-            // miktarTextBox
-            // 
-            miktarTextBox.Location = new Point(141, 172);
-            miktarTextBox.Margin = new Padding(3, 2, 3, 2);
-            miktarTextBox.Name = "miktarTextBox";
-            miktarTextBox.Size = new Size(66, 23);
-            miktarTextBox.TabIndex = 0;
+            miktarComboBox.SelectedIndexChanged += miktarComboBox_SelectedIndexChanged;
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 10.2F, FontStyle.Italic);
-            label9.Location = new Point(213, 173);
+            label9.Location = new Point(214, 173);
             label9.Name = "label9";
             label9.Size = new Size(42, 19);
             label9.TabIndex = 2;
             label9.Text = "Birim";
+            // 
+            // label
+            // 
+            label.AutoSize = true;
+            label.Location = new Point(604, 27);
+            label.Name = "label";
+            label.Size = new Size(0, 15);
+            label.TabIndex = 8;
+            // 
+            // miktarNumericUpDown
+            // 
+            miktarNumericUpDown.Location = new Point(141, 172);
+            miktarNumericUpDown.Name = "miktarNumericUpDown";
+            miktarNumericUpDown.Size = new Size(76, 23);
+            miktarNumericUpDown.TabIndex = 9;
+            miktarNumericUpDown.ValueChanged += miktarNumericUpDown_ValueChanged;
             // 
             // FoodMenu
             // 
@@ -276,14 +294,16 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Info;
             ClientSize = new Size(859, 490);
+            Controls.Add(miktarNumericUpDown);
+            Controls.Add(label);
             Controls.Add(pictureBox2);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(yemekListBox);
-            Controls.Add(pictureBox1);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(yemekPictureBox);
+            Controls.Add(guncelleButton);
+            Controls.Add(silButton);
+            Controls.Add(ekleButton);
             Controls.Add(label9);
             Controls.Add(label6);
             Controls.Add(label4);
@@ -293,26 +313,26 @@
             Controls.Add(label1);
             Controls.Add(miktarComboBox);
             Controls.Add(kategoriComboBox);
-            Controls.Add(textBox4);
-            Controls.Add(miktarTextBox);
-            Controls.Add(textBox6);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
+            Controls.Add(proteinTextBox);
+            Controls.Add(aciklamaTextBox);
+            Controls.Add(kaloriTextBox);
+            Controls.Add(yemekAdıTextBox);
             Margin = new Padding(3, 2, 3, 2);
             Name = "FoodMenu";
             Text = "FoodMenu";
             Load += FoodMenu_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)yemekPictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)miktarNumericUpDown).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox6;
+        private TextBox yemekAdıTextBox;
+        private TextBox kaloriTextBox;
+        private TextBox proteinTextBox;
+        private TextBox aciklamaTextBox;
         private ComboBox kategoriComboBox;
         private Label label1;
         private Label label2;
@@ -320,16 +340,17 @@
         private Label label4;
         private Label label5;
         private Label label6;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private PictureBox pictureBox1;
+        private Button ekleButton;
+        private Button silButton;
+        private Button guncelleButton;
+        private PictureBox yemekPictureBox;
         private ListBox yemekListBox;
         private Label label7;
         private Label label8;
         private PictureBox pictureBox2;
         private ComboBox miktarComboBox;
-        private TextBox miktarTextBox;
         private Label label9;
+        private Label label;
+        private NumericUpDown miktarNumericUpDown;
     }
 }

@@ -10,7 +10,7 @@ namespace AppDiyet.Repo.Abstarcts
 {
     public interface IFoodRepo : IBaseRepo<Food>
     {
-        double CalculatePortionsCalories(int id, Food amount, PortionType portionType); 
-        double CalculatePortionsProteins(int id, Food amount, PortionType portionType); 
+        double CalculatePortionsCalories(int id, double amount, PortionType portionType); 
+        double CalculatePortionsProteins(int id, double amount, PortionType portionType); 
     }
 }
