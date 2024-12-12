@@ -61,14 +61,11 @@ namespace AppDiyet.UI
             //gecmisOgunlerDataGridView.DataSource = gosterilecekListe;
             var liste = mealsService.GetByMeals(userId, baslangicTarihi, bitisTarihi).ToList();
 
-            // Gelen veriyi kontrol et  
             if (liste == null || !liste.Any())
             {
                 MessageBox.Show("Veritabanında belirtilen tarihler için öğün bulunamadı.");
                 return;
             }
-
-            // Debugging için sonucu kontrol et  
             foreach (var item in liste)
             {
                 Debug.WriteLine($"MealName: {item.MealName}, CreateDate: {item.CreateDate}");
