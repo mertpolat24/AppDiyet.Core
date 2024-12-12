@@ -1,9 +1,12 @@
-﻿using AppDiyet.Service.Abstracts;
+﻿using AppDiyet.Core.Concretes;
+using AppDiyet.Core.Enums;
+using AppDiyet.Service.Abstracts;
 using AppDiyet.Service.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,35 +23,53 @@ namespace AppDiyet.UI
         {
             userId = id;
             InitializeComponent();
-            OgunList();
-        }
 
-        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void OgunList()
-        {
-            if (button4.Enabled)
-            {
-                var list = mealsService.GetByMeals(userId, bitisTarihiDTP.Value, baslangicTarihiDTP.Value);
-                gecmisOgunlerDataGridView.DataSource = list;
-            }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            
+            var lst = mealsService.MealFood(userId);
+            gecmisOgunlerDataGridView.DataSource = lst;
         }
 
         private void gecmisOgunlerDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void baslangicTarihiDTP_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bitisTarihiDTP_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void filtreleButton_Click(object sender, EventArgs e)
+        {
+            DateTime baslangicTarihi = baslangicTarihiDTP.Value;
+            DateTime bitisTarihi = bitisTarihiDTP.Value;
+
+            //var liste = mealsService.GetByMeals(userId, new DateTime(2024-11-03), DateTime.Now);
+
+            //var gosterilecekListe = liste.Select(x => new
+            //{
+            //    MealName = ((MealCategories)x.MealName).ToString(), 
+            //    UserId = userId, 
+            //    CreateDate = x.CreateDate
+
+            //}).ToList();
+            //gecmisOgunlerDataGridView.AutoGenerateColumns = true;
+            //gecmisOgunlerDataGridView.DataSource = gosterilecekListe;
+            var liste = mealsService.GetByMeals(userId, baslangicTarihi, bitisTarihi).ToList();
+
+            if (liste == null || !liste.Any())
+            {
+                MessageBox.Show("Veritabanında belirtilen tarihler için öğün bulunamadı.");
+                return;
+            }
+            foreach (var item in liste)
+            {
+                Debug.WriteLine($"MealName: {item.MealName}, CreateDate: {item.CreateDate}");
+            }
         }
     }
 }
